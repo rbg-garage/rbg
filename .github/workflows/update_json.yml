@@ -1,0 +1,26 @@
+name: Update JSON File
+
+on:
+  repository_dispatch:
+    types: [update-json]
+
+jobs:
+  update-json:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Update JSON file
+        run: |
+          # Utilisez un script pour mettre à jour votre fichier JSON ici
+          # Par exemple, vous pourriez utiliser `jq` pour manipuler le fichier JSON
+          echo '${{ github.event.client_payload.jsonObject }}' >> data.json
+
+      - name: Commit changes
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add data.json
+          git commit -m "Update JSON file"
+          git push

@@ -7,6 +7,58 @@
 </head>
 <body>
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un objet JSON</title>
+</head>
+<body>
+    <h1>Ajouter un objet JSON</h1>
+    <textarea id="jsonInput" placeholder='Entrez votre objet JSON ici, par exemple: {"nom": "exemple", "valeur": 123}'></textarea>
+    <button onclick="addJsonObject()">Ajouter</button>
+    <p id="message"></p>
+
+    <script>
+    async function addJsonObject() {
+    const jsonInput = document.getElementById('jsonInput').value;
+    const messageElement = document.getElementById('message');
+
+    try {
+        const jsonObject = JSON.parse(jsonInput);
+
+        const response = await fetch('https://api.github.com/repos/assfrdz/rgb/dispatches', {
+            method: 'POST',
+            headers: {
+                'Authorization': 'token ',
+                'Accept': 'application/vnd.github.v3+json',
+            },
+            body: JSON.stringify({
+                event_type: 'update-json',
+                client_payload: {
+                    jsonObject: jsonObject
+                }
+            })
+        });
+
+        if (response.ok) {
+            messageElement.textContent = "Objet JSON ajouté avec succès!";
+            messageElement.style.color = "green";
+        } else {
+            messageElement.textContent = "Erreur: Impossible d'ajouter l'objet JSON.";
+            messageElement.style.color = "red";
+        }
+    } catch (e) {
+        messageElement.textContent = "Erreur: JSON invalide.";
+        messageElement.style.color = "red";
+    }
+}
+</script>
+</body>
+</html>
+
+
     <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
