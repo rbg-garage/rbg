@@ -3,74 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <title>RBG Garage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="shortcut icon" href="src/img/logo/rbg.png" type="image/x-icon">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap');
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajouter un objet JSON</title>
-</head>
-<body>
-    <h1>Ajouter un objet JSON</h1>
-    <textarea id="jsonInput" placeholder='Entrez votre objet JSON ici, par exemple: {"nom": "exemple", "valeur": 123}'></textarea>
-    <button onclick="addJsonObject()">Ajouter</button>
-    <p id="message"></p>
-
-    <script>
-    async function addJsonObject() {
-    const jsonInput = document.getElementById('jsonInput').value;
-    const messageElement = document.getElementById('message');
-
-    try {
-        const jsonObject = JSON.parse(jsonInput);
-
-        const response = await fetch('https://api.github.com/repos/assfrdz/rgb/dispatches', {
-            method: 'POST',
-            headers: {
-                'Authorization': 'token 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',
-                'Accept': 'application/vnd.github.v3+json',
-            },
-            body: JSON.stringify({
-                event_type: 'update-json',
-                client_payload: {
-                    jsonObject: jsonObject
-                }
-            })
-        });
-
-        if (response.ok) {
-            messageElement.textContent = "Objet JSON ajouté avec succès!";
-            messageElement.style.color = "green";
-        } else {
-            messageElement.textContent = "Erreur: Impossible d'ajouter l'objet JSON.";
-            messageElement.style.color = "red";
-        }
-    } catch (e) {
-        messageElement.textContent = "Erreur: JSON invalide.";
-        messageElement.style.color = "red";
+    *{
+        font-family: "Montserrat";
+        box-sizing: border-box;
     }
+    div{
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        background-color: white;
+        border-radius: 3rem;
+        padding:2rem;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.321);
+
+    }
+    div a{
+        font-family: "Sora";
+        text-align:center;
+        text-decoration: none;
+        color:#00344e;
+        margin:0.5rem;
+    }
+
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #BFDFFA;
+        width:100%;
+        height:100%;
+        overflow: hidden;
+    }
+    h1{
+        
+        font-style: normal;
+        font-weight: 700;
+        font-size: 4rem;
+        line-height: 59px;
+        letter-spacing: 0.1em;  
+        font-variant: all-small-caps;
+        color: #00344e;
+        margin:2rem;
+        text-align: center;
+    }
+
+img{
+    width:20rem;
+
+} 
+
+p{
+    font-family: "Sora";
 }
-</script>
+</style>
+</head>
+<body>
+
+    <img src="src/img/logo/logo_nouv.png" alt="">
+
+    <h1>Notre site se fait une beauté !</h1>
+
+    <p>En attendant, retrouvez-nous sur nos réseaux sociaux :</p>
+
+    <div>
+        <a href="tel:+33659281551"><i class="fa-solid fa-phone"></i> 0659281551</a>
+        <a href="mailto:rgbpro@gmail.com"><i class="fa-solid fa-envelope"></i> rgbpro@gmail.com</a>
+        <a href="https://maps.app.goo.gl/ijExkGfF4wUySpMN7"><i class="fa-solid fa-map-pin"></i> 7 bis Rue des Plantes, 77410 Villevaudé</a>
+        <a href="https://www.snapchat.com/add/rbg0567"><i class="fa-brands fa-snapchat"></i> rbg0567</a>
+        <a href="https://leboncoin.fr">Leboncoin</a>
+    </div>
 
 
-
-    <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/685e9aae2d3be4190e5cb7a9/1iuoooefu';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-    
 </body>
 </html>
