@@ -3,103 +3,479 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RBG Garage</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="shortcut icon" href="src/img/logo/rbg.png" type="image/x-icon">
+    <title>RGB Garage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="shortcut icon" href="src/img/logo/rbg.png" type="image/x-icon">
+    <link rel="stylesheet" href="src/output.css">
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap');
 
-    *{
-        font-family: "Montserrat";
-        box-sizing: border-box;
-    }
-    div{
-        display: flex;
-        flex-direction: column;
-        align-self: center;
-        background-color: white;
-        border-radius: 3rem;
-        padding:2rem;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.321);
-        margin:1rem 0;
-    }
-    div a{
-        font-family: "Sora";
-        text-align:center;
-        text-decoration: none;
-        color:#00344e;
-        margin:0.5rem;
-    }
-
-    body{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: #BFDFFA;
-        width:100%;
-        height:100%;
-        overflow: hidden;
-    }
-    h1{
-        
-        font-style: normal;
-        font-weight: 700;
-        font-size: 4rem;
-        line-height: 59px;
-        letter-spacing: 0.1em;  
-        font-variant: all-small-caps;
-        color: #00344e;
-        margin:2rem;
-        text-align: center;
-    }
-
-img{
-    width:20rem;
-
-} 
-
-p{
-    font-family: "Sora";
-    text-align: center;
-    margin:1rem;
-}
-
-@media screen and (max-width:800px) {
-
- h1{
-    
-        font-size: 2rem;
-        line-height: 30px;
-        
-    }
-
-    div{
-        padding:1rem 0;
-        width: 70%;
-    }
-
-   
-    
-}
 </style>
 </head>
+
+
 <body>
 
-    <img src="src/img/logo/logo_nouv.png" alt="">
+<header class="fixed w-full z-50">
 
-    <h1>Notre site se fait une beauté !</h1>
+<nav class="computer">
+<a href="index.html" ><img src="src/src/img/logo/logo.png" alt="" class="logo"></a>
+<a href="index.html#services">Nos services</a>
+<a href="pieces.html">Nos pièces</a>
+<a href="index.html#garage">Le garage</a>
+<a href="index.html#apropos">A propos</a>
+<a href="index.html#contact">Contact</a>
+</nav>
 
-    <p>En attendant, retrouvez-nous sur nos réseaux sociaux :</p>
+<nav class="mobile bg-white  w-full shadow-sm p-[0.5rem]">
+<a href="index.html#accueil" class="flex text-xs flex-col items-center m-2"><img src="src/img/icon/home_svgrepo.com.png" alt="" class="icon m-auto w-[var(--wh-small-icon)]">Accueil</a>
+<a href="pieces.html" class="flex flex-col text-xs items-center m-2"><img src="src/img/icon/settings_svgrepo.com.png" alt="" class="icon m-auto w-[var(--wh-small-icon)]">Pièces</a>
+<a href="index.html" class="flex flex-col text-xs items-center m-2"><img src="src/img/logo/logo.png" alt="" class="logo w-[5.063rem]"></a>
+<a href="index.html#services" class="flex text-xs flex-col items-center m-2"><img src="src/img/icon/service_svgrepo.com.png" alt="" class="icon  m-auto w-[var(--wh-small-icon)]">Services</a>
+<a href="index.html#contact" class="flex text-xs flex-col items-center m-2"><img src="src/img/icon/phone_svgrepo.com.png" alt="" class="icon  m-auto w-[1rem]">Contact</a>
+</nav>
 
-    <div>
+    </header>
+    <main class="">
+
+        <section class="bloc-1-home bg-[var(--light-blue)] h-fit py-[3rem]" id="accueil">
+            <div class="computer">
+                <div class="left">
+                    <h1>Acheter des pièces d'occasion et faites réparer votre véhicule</h1>
+                    <div>
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus numquam labore cupiditate</h3>
+                        <div><a href="#services" class="cta-1-dark">Réparer</a>
+                        <a href="pieces.html" class="cta-2-white">Chercher une pièce</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="right"></div>
+                <div class="bottom">
+                    <img src="src/img/img/citroen_PNG3 1.png" alt="" class="marque">
+                    <img src="src/img/img/Ford-Logo-PNG-Clipart 1.png" alt="" class="marque">
+                    <img src="src/img/img/logo-renault-4096 1.png" alt="" class="marque">
+                    <img src="src/img/img/R 1.png" alt="" class="marque">
+                    <img src="src/img/img/R 2.png" alt="" class="marque">
+                </div>
+            </div>
+            <div class="mobile flex flex-col">
+                <div class="slide w-full mt-[10rem] mb-[2rem] ">
+                <img src="src/img/img/citroen_PNG3 1.png" class="w-[50%] max-w-[370px] m-auto" alt=""><!--ajouter une transition-->
+                    <div class="button-slide flex align-center justify-center">
+                        <button class="point mx-2 my-4 bg-white h-4 w-4 rounded-2xl"></button>
+                        <button class="point mx-2 my-4  bg-white h-4 w-4 rounded-2xl"></button>
+                        <button class="point mx-2 my-4   bg-white h-4 w-4 rounded-2xl"></button>
+                    </div>
+                </div>
+
+                <h1 class="">Acheter des pièces d'occasion et faites réparer votre véhicule</h1>
+                <h3 class="m-8 text-center">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aspernatur voluptatibus quaerat.
+                     Quo at omnis reprehenderit sed eius asperiores provident sequi veniam esse adipisci.
+                </h3>
+                <div class="flex flex-col">
+                    <a href="#services" class="cta-1-dark ">Réparer</a>
+                    <a href="pieces.html" class="cta-2-white ">Chercher une pièce</a> 
+                </div>
+
+
+            </div>
+        </section>
+
+        <section id="services" class="p-[2rem] flex flex-col">
+           
+            <h2 class="">Nos services ?</h2>
+            <div class="flex flex-wrap">
+            <p class="md:w-[50%] md:max-w-[40rem] m-0 p-0">Votre garage RGB propose toutes sortes de prestations : de la réparation de vos pannes à la vente de pièces auto. Nous vous apportons conseil et vous redirigeons vers les prestataires adaptés à votre demande.</p>
+                <img src="src/img/img/white car turned back.png" class="md:w-[35%] w-[14.8rem] mx-auto my-[4rem]" alt="" srcset="">
+            </div>
+
+            <a href="#contact" class="cta-1-dark m-auto">Contact</a>
+
+        </section>
+
+        <section id="pieces"  class="p-[2rem] flex flex-col">
+
+            <h2>Nos pièces ?</h2>
+
+            <p>Toute sorte de pièces vous sont proposées. Différentes références sont disponibles. Vous pouvez consulter la liste de vos produits en ligne et réserver votre pièce. Pour plus d'informations, discutez avec nous au travers du chat en ligne !</p>
+
+            <div class="view-on-device ">
+                 <div class="search-bar">
+                    <input type="text" id="search-content" >
+                    <button id="search-action"><img src="src/img/icon/search_svgrepo.com.png" alt="" class="icon"></button>
+            </div>
+
+            <div class="info-search-bar flex justify-between w-100% ">
+
+                <div>
+                    <span class="search-name" >Pneus citroën</span>
+                    <span class="results-number" >18 résultats</span>
+                </div>
+
+                <div class="btn">
+                    <button class="filter"><img src="src/img/icon/filter_svgrepo.com.png" alt="" class="icon">Filtre</button> 
+                    <button class="orderby"> <img src="src/img/icon/sort-up_svgrepo.com.png" alt="" class="icon">Trier par</button> 
+                </div>
+             
+           </div>
+
+            <div class="search-results">
+
+                <div class="item-search-view">
+                    <div class="img">
+                        <button class="arrow-left"></button>
+                        <button class="arrow-right"></button>
+                    </div>
+                    <div class="text-item">
+                    <div class="title-item">
+                        <h3>Pneus</h3>
+                        <span>Citroën</span>
+                    </div>
+                    <span class="category">Catégorie : Carosserie</span>
+                    <div class="state-price-item">
+                        <span class="state">Bon état</span>
+                        <h3>17,00 &euro;</h3>
+                    </div>
+
+                    <div class="cta-1-dark">Réserver</div>
+
+                    </div>
+                    
+
+
+                </div>
+
+                
+<div class="item-search-view">
+                    <div class="img">
+                        <button class="arrow-left"></button>
+                        <button class="arrow-right"></button>
+                    </div>
+                    <div class="text-item">
+                    <div class="title-item">
+                        <h3>Pneus</h3>
+                        <span>Citroën</span>
+                    </div>
+                    <span class="category">Catégorie : Carosserie</span>
+                    <div class="state-price-item">
+                        <span class="state">Bon état</span>
+                        <h3>17,00 &euro;</h3>
+                    </div>
+
+                    <div class="cta-1-dark">Réserver</div>
+
+                    </div>
+                    
+
+
+                </div>
+               <div class="item-search-view">
+                    <div class="img">
+                        <button class="arrow-left"></button>
+                        <button class="arrow-right"></button>
+                    </div>
+                    <div class="text-item">
+                    <div class="title-item">
+                        <h3>Pneus</h3>
+                        <span>Citroën</span>
+                    </div>
+                    <span class="category">Catégorie : Carosserie</span>
+                    <div class="state-price-item">
+                        <span class="state">Bon état</span>
+                        <h3>17,00 &euro;</h3>
+                    </div>
+
+                    <div class="cta-1-dark">Réserver</div>
+
+                    </div>
+                    
+
+
+                </div>
+                <div class="item-search-view">
+                    <div class="img">
+                        <button class="arrow-left"></button>
+                        <button class="arrow-right"></button>
+                    </div>
+                    <div class="text-item">
+                    <div class="title-item">
+                        <h3>Pneus</h3>
+                        <span>Citroën</span>
+                    </div>
+                    <span class="category">Catégorie : Carosserie</span>
+                    <div class="state-price-item">
+                        <span class="state">Bon état</span>
+                        <h3>17,00 &euro;</h3>
+                    </div>
+
+                    <div class="cta-1-dark">Réserver</div>
+
+                    </div>
+                    
+
+
+                </div>
+
+                <div class="item-search-view">
+                    <div class="img">
+                        <button class="arrow-left"></button>
+                        <button class="arrow-right"></button>
+                    </div>
+                    <div class="text-item">
+                    <div class="title-item">
+                        <h3>Pneus</h3>
+                        <span>Citroën</span>
+                    </div>
+                    <span class="category">Catégorie : Carosserie</span>
+                    <div class="state-price-item">
+                        <span class="state">Bon état</span>
+                        <h3>17,00 &euro;</h3>
+                    </div>
+
+                    <div class="cta-1-dark">Réserver</div>
+
+                    </div>
+                    
+
+
+                </div>
+                <div class="item-search-view">
+                    <div class="img">
+                        <button class="arrow-left"></button>
+                        <button class="arrow-right"></button>
+                    </div>
+                    <div class="text-item">
+                    <div class="title-item">
+                        <h3>Pneus</h3>
+                        <span>Citroën</span>
+                    </div>
+                    <span class="category">Catégorie : Carosserie</span>
+                    <div class="state-price-item">
+                        <span class="state">Bon état</span>
+                        <h3>17,00 &euro;</h3>
+                    </div>
+
+                    <div class="cta-1-dark">Réserver</div>
+
+                    </div>
+                    
+
+
+                </div>
+                <div class="item-search-view">
+                    <div class="img">
+                        <button class="arrow-left"></button>
+                        <button class="arrow-right"></button>
+                    </div>
+                    <div class="text-item">
+                    <div class="title-item">
+                        <h3>Pneus</h3>
+                        <span>Citroën</span>
+                    </div>
+                    <span class="category">Catégorie : Carosserie</span>
+                    <div class="state-price-item">
+                        <span class="state">Bon état</span>
+                        <h3>17,00 &euro;</h3>
+                    </div>
+
+                    <div class="cta-1-dark">Réserver</div>
+
+                    </div>
+                    
+
+
+                </div>
+                <div class="item-search-view">
+                    <div class="img">
+                        <button class="arrow-left"></button>
+                        <button class="arrow-right"></button>
+                    </div>
+                    <div class="text-item">
+                    <div class="title-item">
+                        <h3>Pneus</h3>
+                        <span>Citroën</span>
+                    </div>
+                    <span class="category">Catégorie : Carosserie</span>
+                    <div class="state-price-item">
+                        <span class="state">Bon état</span>
+                        <h3>17,00 &euro;</h3>
+                    </div>
+
+                    <div class="cta-1-dark">Réserver</div>
+
+                    </div>
+                    
+
+
+                </div>
+
+            </div>
+             <div class="blur-bg">
+
+                <a href="pieces.html" class="cta-2-white">Voir plus</a>
+
+            </div>
+            </div>
+
+           
+
+
+        </section>
+
+         
+
+        <section id="garage" class="p-[2rem] flex flex-col">
+            <h2>Le garage</h2>
+
+            <div class="flex flex-wrap ">
+                <div class="flex flex-col md:w-[40%] ">
+                    <p>Votre garage est situé à Villevaudé, en Seine et Marne (77). Vous pourrez vous rendre sur place pour trouver les pièces dont vous avez besoin et bénéficier des conseils de notre équipe. </p>
+                    <a href="https://maps.app.goo.gl/PExCR4BmKcfgec319" class="cta-1-dark mb-16"> Voir sur maps</a>
+                </div>
+                <div class="carte mobile md:w-[50%] flex flex-col item-center justify-center"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2622.4912725982244!2d2.666376499999997!3d48.9060317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e61b5cbf349fab%3A0xbc0d6a7b8ab22aa0!2sSasu%20RBG!5e0!3m2!1sfr!2sfr!4v1751369766008!5m2!1sfr!2sfr" width="315" height="289" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                <div class="carte computer md:w-[50%] flex flex-col item-center justify-center"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2622.4912725982244!2d2.666376499999997!3d48.9060317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e61b5cbf349fab%3A0xbc0d6a7b8ab22aa0!2sSasu%20RBG!5e0!3m2!1sfr!2sfr!4v1751369766008!5m2!1sfr!2sfr" width="589" height="438" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+
+            </div>
+        </section>
+
+        <section id="apropos" class="p-[2rem] flex flex-col">
+            <h2>A propos</h2>
+            <div>
+            <div class="slide">
+                    <button></button>
+                    <button></button>
+                    <button></button>  
+            </div>
+            <p>Description de l’équipe si nécessaire. Photos du garage.</p>
+            </div>
+            
+        </section>
+
+
+        <section id="contact">
+            <form action="" method="post">
+                <label for="mail">Email</label>
+                <input type="text" name="mail">
+                <label for="content">Message</label>
+                <textarea name="content" id=""></textarea>
+                <button class="cta-1-dark">Envoyer</button>
+            </form>
+            <div>
+                <a href="tel:+33659281551"><i class="fa-solid fa-phone"></i> 0659281551</a>
+                <a href="mailto:rgbpro@gmail.com"><i class="fa-solid fa-envelope"></i> rgbpro@gmail.com</a>
+                <a href="https://maps.app.goo.gl/ijExkGfF4wUySpMN7"><i class="fa-solid fa-map-pin"></i> 7 bis Rue des Plantes, 77410 Villevaudé</a>
+                <a href="https://www.snapchat.com/add/rbg0567"><i class="fa-brands fa-snapchat"></i>rbg0567</a>
+                <a href="https://leboncoin.fr"><img src="src/img/icon/leboncoin_svgrepo.com.png" alt="" class="icon">Leboncoin</a>
+            </div>
+        </section>
+
+    </main>
+
+
+
+
+
+
+    <footer>
+<div class="left">
+    <img src="src/img/logo/logo_nouv.png" alt="logo RGB">
+    <div class="rsx-bar">
         <a href="tel:+33659281551"><i class="fa-solid fa-phone"></i> 0659281551</a>
-        <a href="mailto:rgbpro@gmail.com"><i class="fa-solid fa-envelope"></i> rgbpro@gmail.com</a>
-        <a href="https://maps.app.goo.gl/ijExkGfF4wUySpMN7"><i class="fa-solid fa-map-pin"></i> 7 bis Rue des Plantes, 77410 Villevaudé</a>
-        <a href="https://www.snapchat.com/add/rbg0567"><i class="fa-brands fa-snapchat"></i> rbg0567</a>
-        <a href="https://leboncoin.fr">Leboncoin</a>
+                <a href="mailto:rgbpro@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://maps.app.goo.gl/ijExkGfF4wUySpMN7"><i class="fa-solid fa-map-pin"></i></a>
+                <a href="https://www.snapchat.com/add/rbg0567"><i class="fa-brands fa-snapchat"></i></a>
+                <a href="https://leboncoin.fr"><img src="src/img/icon/leboncoin_svgrepo.com.png" alt="" class="icon"></a>
     </div>
+</div>
+
+<div class="middle">
+    <span>Copyright @ RBG <br> Tous droits réservés.</span>
+</div>
+
+<div class="right">
+    <a href="index.html#accueil">Accueil</a>
+    <a href="index.html#services">Nos services</a>
+    <a href="pieces.html">Nos pièces</a>
+    <a href="index.html#garage">Le garage</a>
+    <a href="index.html#apropos">A propos</a>
+    <a href="index.html#contact">Contact</a>
+</div>
+    </footer>
 
 
+
+
+
+
+
+
+
+ <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const textElement = document.getElementById('search-content');
+            const triggerElement = document.getElementById('trigger-element');
+            const textToType = "Pneus citroen";
+            const results = [document.querySelector(".info-search-bar") , document.querySelector(".search-results"),document.querySelector(".blur-bg") ];
+            let index = 0;
+            let hasTyped = false;
+            const scrollPositionToTrigger = 1500; 
+
+             if(textToType !== textElement.value){
+                results.forEach(function(result) {
+                    result.style.display = "none";
+                    result.style.opacity="0";
+                });
+            }
+
+    window.addEventListener('scroll', () => {
+      
+        const currentScrollPosition = window.scrollY || window.pageYOffset;
+
+        // Si la position actuelle est supérieure ou égale à la position souhaitée
+        if (currentScrollPosition >= scrollPositionToTrigger) {
+            // Exécutez l'action
+            type();
+
+        }
+    });
+            function type() {
+                if (index < textToType.length) {
+                    textElement.value += textToType.charAt(index);
+                    index++;
+                    setTimeout(type, 250);
+                }
+            appear();
+
+            }
+
+            function appear(){
+                if(textToType === textElement.value){
+                results.forEach(function(result) {
+                    result.style.display = "flex";
+                    result.style.transition="opacity 2s ease-in";
+                    result.style.opacity="1";
+                });
+            }
+            }
+
+          
+            });
+    </script>
+
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/685e9aae2d3be4190e5cb7a9/1iuoooefu';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+    
 </body>
 </html>
