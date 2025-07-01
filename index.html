@@ -328,46 +328,51 @@
         <section id="garage" class="p-[2rem] flex flex-col">
             <h2>Le garage</h2>
 
-            <div class="flex flex-wrap ">
+            <div class="flex flex-wrap sm:justify-center ">
                 <div class="flex flex-col md:w-[40%] ">
                     <p>Votre garage est situé à Villevaudé, en Seine et Marne (77). Vous pourrez vous rendre sur place pour trouver les pièces dont vous avez besoin et bénéficier des conseils de notre équipe. </p>
                     <a href="https://maps.app.goo.gl/PExCR4BmKcfgec319" class="cta-1-dark mb-16"> Voir sur maps</a>
                 </div>
-                <div class="carte mobile md:w-[50%] flex flex-col item-center justify-center"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2622.4912725982244!2d2.666376499999997!3d48.9060317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e61b5cbf349fab%3A0xbc0d6a7b8ab22aa0!2sSasu%20RBG!5e0!3m2!1sfr!2sfr!4v1751369766008!5m2!1sfr!2sfr" width="315" height="289" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-                <div class="carte computer md:w-[50%] flex flex-col item-center justify-center"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2622.4912725982244!2d2.666376499999997!3d48.9060317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e61b5cbf349fab%3A0xbc0d6a7b8ab22aa0!2sSasu%20RBG!5e0!3m2!1sfr!2sfr!4v1751369766008!5m2!1sfr!2sfr" width="589" height="438" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                <div class="carte mobile w-[100%] md:w-[50%] flex flex-col item-center justify-center"><iframe class="w-[100%] m-auto" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2622.4912725982244!2d2.666376499999997!3d48.9060317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e61b5cbf349fab%3A0xbc0d6a7b8ab22aa0!2sSasu%20RBG!5e0!3m2!1sfr!2sfr!4v1751369766008!5m2!1sfr!2sfr" width="315" height="289" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                <div class="carte computer md:w-[50%] flex flex-col item-center justify-center"><iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2622.4912725982244!2d2.666376499999997!3d48.9060317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e61b5cbf349fab%3A0xbc0d6a7b8ab22aa0!2sSasu%20RBG!5e0!3m2!1sfr!2sfr!4v1751369766008!5m2!1sfr!2sfr" width="589" height="438" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+
 
             </div>
         </section>
 
         <section id="apropos" class="p-[2rem] flex flex-col">
-            <h2>A propos</h2>
-            <div>
-            <div class="slide">
-                    <button></button>
-                    <button></button>
-                    <button></button>  
-            </div>
-            <p>Description de l’équipe si nécessaire. Photos du garage.</p>
+            <h2>Galerie</h2>
+            <div class="m-auto slide galerie flex justify-center items-end">
+                    <button class="mx-2 my-4 bg-white h-4 w-4 rounded-2xl"></button>
+                    <button class="mx-2 my-4 bg-white h-4 w-4 rounded-2xl"></button>
+                    <button class="mx-2 my-4 bg-white h-4 w-4 rounded-2xl"></button>  
+            
             </div>
             
         </section>
 
 
-        <section id="contact">
-            <form action="" method="post">
+        <section id="contact" class="p-[2rem] flex flex-col">
+
+            <h2>Contact</h2>
+            <div class=" flex flex-col-reverse sm:flex-row sm:items-center">
+            <form class="flex flex-col w-[100%] sm:w-[45%]" action="" method="post">
                 <label for="mail">Email</label>
                 <input type="text" name="mail">
                 <label for="content">Message</label>
-                <textarea name="content" id=""></textarea>
+                <textarea name="content" id="" cols="" rows="10"></textarea>
                 <button class="cta-1-dark">Envoyer</button>
             </form>
-            <div>
+            <div class="flex flex-col md:items-center m-auto">
                 <a href="tel:+33659281551"><i class="fa-solid fa-phone"></i> 0659281551</a>
                 <a href="mailto:rgbpro@gmail.com"><i class="fa-solid fa-envelope"></i> rgbpro@gmail.com</a>
                 <a href="https://maps.app.goo.gl/ijExkGfF4wUySpMN7"><i class="fa-solid fa-map-pin"></i> 7 bis Rue des Plantes, 77410 Villevaudé</a>
                 <a href="https://www.snapchat.com/add/rbg0567"><i class="fa-brands fa-snapchat"></i>rbg0567</a>
-                <a href="https://leboncoin.fr"><img src="src/img/icon/leboncoin_svgrepo.com.png" alt="" class="icon">Leboncoin</a>
+                <div class="flex items-center"><img src="src/img/icon/leboncoin_svgrepo.com.png" alt="" class="icon"><a href="https://leboncoin.fr">Leboncoin</a></div>
+                
             </div>
+            </div>
+            
         </section>
 
     </main>
@@ -410,57 +415,64 @@
 
 
 
-
- <script>
+<script>
         document.addEventListener('DOMContentLoaded', () => {
             const textElement = document.getElementById('search-content');
-            const triggerElement = document.getElementById('trigger-element');
             const textToType = "Pneus citroen";
-            const results = [document.querySelector(".info-search-bar") , document.querySelector(".search-results"),document.querySelector(".blur-bg") ];
+            const results = [
+                document.querySelector(".info-search-bar"),
+                document.querySelector(".search-results"),
+                document.querySelector(".blur-bg")
+            ];
             let index = 0;
-            let hasTyped = false;
-            const scrollPositionToTrigger = 1500; 
+            const scrollPositionToTrigger = 1200;
 
-             if(textToType !== textElement.value){
-                results.forEach(function(result) {
-                    result.style.display = "none";
-                    result.style.opacity="0";
-                });
-            }
+            window.addEventListener('scroll', () => {
+                const currentScrollPosition = window.scrollY || window.pageYOffset;
 
-    window.addEventListener('scroll', () => {
-      
-        const currentScrollPosition = window.scrollY || window.pageYOffset;
+                if (currentScrollPosition >= scrollPositionToTrigger && textToType !== textElement.value) {
+                    type();
+                }
+            });
 
-        // Si la position actuelle est supérieure ou égale à la position souhaitée
-        if (currentScrollPosition >= scrollPositionToTrigger) {
-            // Exécutez l'action
-            type();
-
-        }
-    });
             function type() {
                 if (index < textToType.length) {
                     textElement.value += textToType.charAt(index);
                     index++;
-                    setTimeout(type, 250);
+                    setTimeout(type, 150);
+                } else {
+                    appear();
+                    startScrolling();
                 }
-            appear();
-
             }
 
-            function appear(){
-                if(textToType === textElement.value){
+            function appear() {
                 results.forEach(function(result) {
                     result.style.display = "flex";
-                    result.style.transition="opacity 2s ease-in";
-                    result.style.opacity="1";
+                    // Utilisez setTimeout pour permettre au navigateur de traiter le changement de display
+                    setTimeout(() => {
+                        result.style.opacity = "1";
+                    }, 10);
                 });
             }
-            }
 
-          
-            });
+            function startScrolling() {
+            const scrollableDiv = document.querySelector('.view-on-device');
+            scrollInterval = setInterval(() => {
+                // Incrémentez scrollTop pour faire défiler vers le bas
+                scrollableDiv.scrollTop += 1;
+
+                // Réinitialisez scrollTop à 0 si vous atteignez le bas
+                if (scrollableDiv.scrollTop >= scrollableDiv.scrollHeight - scrollableDiv.clientHeight) {
+                    scrollableDiv.scrollTop = 0;
+                }
+            }, 50); // Ajustez l'intervalle pour contrôler la vitesse de défilement
+        }
+
+        function stopScrolling() {
+            clearInterval(scrollInterval);
+        }
+        });
     </script>
 
     <!--Start of Tawk.to Script-->

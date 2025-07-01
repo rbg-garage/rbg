@@ -90,8 +90,24 @@ h1,h2{
 
 }
 
-p{
+
+
+p,label{
     margin:1rem;
+    letter-spacing: 0.09em;
+
+}
+
+.bloc-1-home h3{
+    letter-spacing: 0.09em;
+
+}
+
+form input, textarea{
+    background-color: var(--light-grey);
+    margin: auto 1rem;
+    border-radius: var(--border-radius) ;
+    padding:1rem;
 }
 
 h2{
@@ -103,6 +119,12 @@ h2{
 
 .icon{
     width:var(--wh-small-icon);
+}
+
+i{
+    color:var(--dark-blue);
+    font-size: 1.25rem;
+    margin:1rem; 
 }
 
 .search-bar{
@@ -265,9 +287,23 @@ h2{
     padding:5rem;
 }
 
-.slide{
-    
+.info-search-bar, .search-results, .blur-bg {
+            display: none;
+            opacity: 0;
+            transition: opacity 2s ease-in;
+        }
+
+
+.galerie{
+    margin: 2rem;
+    width:36.875rem;
+    height:27.375rem;
+    align-self: center;
+    background-color: var(--dark-grey);
+    border-radius: var(--border-radius);
+
 }
+
 
 
 @media screen and (max-width:1120px){
@@ -300,7 +336,15 @@ h2{
     padding:1rem;
 }
 
+.galerie{
 
+    width:21.063rem;
+    height:27.375rem;
+    align-self: center;
+    background-color: var(--dark-grey);
+    border-radius: 0.625rem;
+
+}
 
 
 .computer{
