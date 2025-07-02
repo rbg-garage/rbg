@@ -10,6 +10,7 @@ body {
   cursor: url('./img/icon/wrench_svgrepo.com.png'),default;
 }
 
+
 :root{
     --degrade: linear-gradient(270deg, #4BA5FB 0%, #2B4F71 100%);
     --blur:blur(25px);
