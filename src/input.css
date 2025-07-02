@@ -7,7 +7,7 @@
 }
 
 body {
-  cursor: url('/icon/wrench_svgrepo.com.png'),default;
+  cursor: url('./img/icon/wrench_svgrepo.com.png'),default;
 }
 
 :root{
@@ -36,7 +36,11 @@ body {
 }
 
 .computer{
-    display:block;
+    display:flex;
+}
+
+nav.computer{
+    letter-spacing: 0.08em;
 }
 
 .mobile{
@@ -54,6 +58,11 @@ text-align: center;
 padding:1rem 2rem;
 margin:1rem auto;
 border-radius: 2rem;
+}
+
+.computer .cta-1-dark, .computer .cta-2-white{
+margin:1rem;
+
 }
 
 .cta-2-white{
@@ -90,6 +99,25 @@ h1,h2{
 
 }
 
+.bloc-1-home .computer h1, .computer .inside-box {
+    text-align: left;
+    line-height: 3rem;
+    width: 100%;
+    position: relative;
+    left:15rem;
+    margin:1rem 0;
+
+}
+
+.bloc-1-home .computer {
+    height:120vh;
+}
+
+.bloc-1-home .computer .right{
+   background: url(./img/logo/logo.png) no-repeat center;
+   background-color: var(--light-blue);
+}
+
 
 
 p,label{
@@ -119,6 +147,12 @@ h2{
 
 .icon{
     width:var(--wh-small-icon);
+    
+}
+
+#contact .icon{
+    width:var(--wh-small-icon);
+    margin:1rem;
 }
 
 i{
@@ -276,6 +310,20 @@ i{
 
 }
 
+.home-blur-bg {
+    width:100%;
+    overflow: hidden;
+    position: relative;
+    bottom:10rem;
+    height:15rem;
+    backdrop-filter: var(--blur);
+    border-top:var(--border-blue);
+    border-bottom:var(--border-blue);
+
+
+
+}
+
 .view-on-device{
     transform: scale(0.8);
     width:100%;
@@ -305,6 +353,9 @@ i{
 }
 
 
+footer{
+    background: var(--light-blue);
+}
 
 @media screen and (max-width:1120px){
 

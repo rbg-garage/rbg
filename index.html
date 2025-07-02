@@ -18,13 +18,16 @@
 
 <header class="fixed w-full z-50">
 
-<nav class="computer">
-<a href="index.html" ><img src="src/src/img/logo/logo.png" alt="" class="logo"></a>
-<a href="index.html#services">Nos services</a>
-<a href="pieces.html">Nos pièces</a>
-<a href="index.html#garage">Le garage</a>
-<a href="index.html#apropos">A propos</a>
-<a href="index.html#contact">Contact</a>
+<nav class="computer  w-full flex flex-row items-center py-8">
+<a href="index.html" class="mx-8 " ><img src="src/img/logo/logo.png" alt="" class="w-[10rem]"></a>
+<a href="index.html#services" class="mx-8" >Nos services</a>
+<a href="pieces.html" class="mx-8" >Nos pièces</a>
+<a href="index.html#garage" class="mx-8" >Le garage</a>
+<a href="index.html#apropos" class="mx-8" >A propos</a>
+<a href="index.html#contact" class="mx-8" >Contact</a><div class="rsx-bar flex flex-row items-center">
+ <a href="tel:+33659281551"><i class="fa-solid fa-phone"></i> </a>
+  </div>
+
 </nav>
 
 <nav class="mobile bg-white  w-full shadow-sm p-[0.5rem]">
@@ -38,25 +41,30 @@
     </header>
     <main class="">
 
-        <section class="bloc-1-home bg-[var(--light-blue)] h-fit py-[3rem]" id="accueil">
-            <div class="computer">
-                <div class="left">
-                    <h1>Acheter des pièces d'occasion et faites réparer votre véhicule</h1>
-                    <div>
-                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus numquam labore cupiditate</h3>
-                        <div><a href="#services" class="cta-1-dark">Réparer</a>
+        <section class="bloc-1-home md:bg-white bg-[var(--light-blue)] h-fit sm:h-screen py-[3rem] md:py-0" id="accueil">
+            <div class="computer flex flex-col h-screen">
+                <div class="computer h-screen">
+ <div class="left m-auto flex flex-col flex-wrap justify-items-start items-center">
+                    
+                    <h1 class="text-left">Acheter des pièces d'occasion et faites réparer votre véhicule</h1>
+                    <div class="inside-box">
+                        <h3 class="w-[70%]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus numquam labore cupiditate</h3>
+                        <div class="my-14"><a href="#services" class="cta-1-dark m-5">Réparer</a>
                         <a href="pieces.html" class="cta-2-white">Chercher une pièce</a>
                         </div>
                     </div>
                 </div>
-                <div class="right"></div>
-                <div class="bottom">
-                    <img src="src/img/img/citroen_PNG3 1.png" alt="" class="marque">
-                    <img src="src/img/img/Ford-Logo-PNG-Clipart 1.png" alt="" class="marque">
-                    <img src="src/img/img/logo-renault-4096 1.png" alt="" class="marque">
-                    <img src="src/img/img/R 1.png" alt="" class="marque">
-                    <img src="src/img/img/R 2.png" alt="" class="marque">
+                <div class="right w-[50%] bg-[var(--light-blue)]"></div>
+                
                 </div>
+               <div class="bottom home-blur-bg w-screen items-center flex justify-around">
+                    <img src="src/img/img/citroen_PNG3 1.png" alt="" class="marque h-[5.6875rem] w-[8.0625rem]">
+                    <img src="src/img/img/Ford-Logo-PNG-Clipart 1.png" alt="" class="marque w-[10rem] h-[3.875rem]">
+                    <img src="src/img/img/logo-renault-4096 1.png" alt="" class="marque h-[7.8125rem] w-[7.8125rem]">
+                    <img src="src/img/img/R 1.png" alt="" class="marque  h-[4.375rem]  w-[4.375rem]">
+                    <img src="src/img/img/R 2.png" alt="" class="marque w-[5.375rem] h-[5.375rem]">
+                </div>
+                
             </div>
             <div class="mobile flex flex-col">
                 <div class="slide w-full mt-[10rem] mb-[2rem] ">
@@ -382,11 +390,11 @@
 
 
 
-    <footer>
-<div class="left">
-    <img src="src/img/logo/logo_nouv.png" alt="logo RGB">
-    <div class="rsx-bar">
-        <a href="tel:+33659281551"><i class="fa-solid fa-phone"></i> 0659281551</a>
+    <footer class="flex md:flex-row flex-col  justify-between items-center ">
+<div class="m-8 left flex flex-col justify-center">
+    <img src="src/img/logo/logo_nouv.png"  class="w-[10rem] m-auto" alt="logo RGB">
+    <div class="rsx-bar flex flex-row items-center">
+        <a href="tel:+33659281551"><i class="fa-solid fa-phone"></i> </a>
                 <a href="mailto:rgbpro@gmail.com"><i class="fa-solid fa-envelope"></i></a>
                 <a href="https://maps.app.goo.gl/ijExkGfF4wUySpMN7"><i class="fa-solid fa-map-pin"></i></a>
                 <a href="https://www.snapchat.com/add/rbg0567"><i class="fa-brands fa-snapchat"></i></a>
@@ -394,11 +402,11 @@
     </div>
 </div>
 
-<div class="middle">
+<div class="middle text-center m-8">
     <span>Copyright @ RBG <br> Tous droits réservés.</span>
 </div>
 
-<div class="right">
+<div class="right m-8  flex flex-col justify-center text-center">
     <a href="index.html#accueil">Accueil</a>
     <a href="index.html#services">Nos services</a>
     <a href="pieces.html">Nos pièces</a>
@@ -426,6 +434,8 @@
             ];
             let index = 0;
             const scrollPositionToTrigger = 1200;
+            const navComp = document.querySelector('nav.computer');
+
 
             window.addEventListener('scroll', () => {
                 const currentScrollPosition = window.scrollY || window.pageYOffset;
@@ -434,6 +444,24 @@
                     type();
                 }
             });
+
+            //menu
+
+             window.addEventListener('scroll', () => {
+                const currentScrollPosition = window.scrollY || window.pageYOffset;
+
+                if (currentScrollPosition >= 500 ) {
+                    navComp.style.backgroundColor="white";
+                    navComp.classList.add("shadow-sm");
+                }else{
+                    navComp.style.backgroundColor="transparent";
+                    navComp.classList.remove("shadow-sm");
+
+
+                }
+            });
+
+
 
             function type() {
                 if (index < textToType.length) {
