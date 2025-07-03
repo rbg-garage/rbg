@@ -343,20 +343,78 @@ i{
         }
 
 
-.galerie{
+.galerie, .slide{
     margin: 2rem;
     width:36.875rem;
     height:27.375rem;
     align-self: center;
     background-color: var(--dark-grey);
-    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    border-radius: 0.625rem;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 3s ease-in-out;
+    opacity: 1;
 
 }
+
+.slide{
+    width:100vw;
+    height:50vh;
+    background-size:50%;
+    background-color: transparent;
+    background-repeat: no-repeat;
+
+}
+
+
 
 
 footer{
     background: var(--light-blue);
 }
+ .mySlides {
+            display: none;
+        }
+
+
+
+ .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+
+        .galerie{
+
+    width:32rem;
+    height:27.375rem;
+    align-self: center;
+    border-radius: 0.625rem;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 3s ease-in-out;
+    opacity: 1;
+
+}
+
+.point {
+    background-color: rgba(255, 255, 255, 0.675);
+    /* Ajoutez d'autres styles par défaut pour le bouton */
+}
+
+.point.highlight {
+    background-color: rgb(255, 255, 255);
+    border:var(--border-blue); /* Jaune pour la surbrillance, vous pouvez choisir une autre couleur */
+    /* Ajoutez d'autres styles pour le bouton en surbrillance */
+}
+
 
 @media screen and (max-width:1120px){
 
@@ -371,6 +429,11 @@ footer{
     --height-blur-band:20rem;
 
 
+}
+
+.bloc-1-home{
+    background-color: var(--light-blue);
+    height:fit-content;
 }
 
 .search-results div:nth-last-child(n+3){
@@ -393,8 +456,11 @@ footer{
     width:21.063rem;
     height:27.375rem;
     align-self: center;
-    background-color: var(--dark-grey);
     border-radius: 0.625rem;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
+    opacity: 1;
 
 }
 

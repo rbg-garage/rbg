@@ -41,14 +41,13 @@
     </header>
     <main class="">
 
-        <section class="bloc-1-home md:bg-white bg-[var(--light-blue)] h-fit sm:h-screen py-[3rem] md:py-0" id="accueil">
+        <section class="bloc-1-home bg-white  h-screen py-[3rem] md:py-0" id="accueil">
             <div class="computer flex flex-col h-screen">
                 <div class="computer h-screen">
  <div class="left m-auto flex flex-col flex-wrap justify-items-start items-center">
                     
                     <h1 class="text-left">Acheter des pièces d'occasion et faites réparer votre véhicule</h1>
                     <div class="inside-box">
-                        <h3 class="w-[70%]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus numquam labore cupiditate</h3>
                         <div class="my-14"><a href="#services" class="cta-1-dark m-5">Réparer</a>
                         <a href="pieces.html" class="cta-2-white">Chercher une pièce</a>
                         </div>
@@ -68,12 +67,6 @@
             </div>
             <div class="mobile flex flex-col">
                 <div class="slide w-full mt-[10rem] mb-[2rem] ">
-                <img src="src/img/img/citroen_PNG3 1.png" class="w-[50%] max-w-[370px] m-auto" alt=""><!--ajouter une transition-->
-                    <div class="button-slide flex align-center justify-center">
-                        <button class="point mx-2 my-4 bg-white h-4 w-4 rounded-2xl"></button>
-                        <button class="point mx-2 my-4  bg-white h-4 w-4 rounded-2xl"></button>
-                        <button class="point mx-2 my-4   bg-white h-4 w-4 rounded-2xl"></button>
-                    </div>
                 </div>
 
                 <h1 class="">Acheter des pièces d'occasion et faites réparer votre véhicule</h1>
@@ -350,11 +343,8 @@
 
         <section id="apropos" class="p-[2rem] flex flex-col">
             <h2>Galerie</h2>
-            <div class="m-auto slide galerie flex justify-center items-end">
-                    <button class="mx-2 my-4 bg-white h-4 w-4 rounded-2xl"></button>
-                    <button class="mx-2 my-4 bg-white h-4 w-4 rounded-2xl"></button>
-                    <button class="mx-2 my-4 bg-white h-4 w-4 rounded-2xl"></button>  
-            
+            <div class="m-auto  galerie flex justify-center items-end">
+          
             </div>
             
         </section>
@@ -392,7 +382,7 @@
 
     <footer class="flex md:flex-row flex-col  justify-between items-center ">
 <div class="m-8 left flex flex-col justify-center">
-    <img src="src/img/logo/logo_nouv.png"  class="w-[10rem] m-auto" alt="logo RGB">
+    <img src="src/img/logo/logo.png"  class="w-[10rem] m-auto" alt="logo RGB">
     <div class="rsx-bar flex flex-row items-center">
         <a href="tel:+33659281551"><i class="fa-solid fa-phone"></i> </a>
                 <a href="mailto:rgbpro@gmail.com"><i class="fa-solid fa-envelope"></i></a>
@@ -423,85 +413,119 @@
 
 
 
-<script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const textElement = document.getElementById('search-content');
-            const textToType = "Pneus citroen";
-            const results = [
-                document.querySelector(".info-search-bar"),
-                document.querySelector(".search-results"),
-                document.querySelector(".blur-bg")
-            ];
-            let index = 0;
-            const scrollPositionToTrigger = 1200;
-            const navComp = document.querySelector('nav.computer');
+<script>document.addEventListener('DOMContentLoaded', () => {
+    function slidesRound(imgArray, container) {
+        let currentIndex = 0;
+        const buttons = [];
 
-
-            window.addEventListener('scroll', () => {
-                const currentScrollPosition = window.scrollY || window.pageYOffset;
-
-                if (currentScrollPosition >= scrollPositionToTrigger && textToType !== textElement.value) {
-                    type();
-                }
-            });
-
-            //menu
-
-             window.addEventListener('scroll', () => {
-                const currentScrollPosition = window.scrollY || window.pageYOffset;
-
-                if (currentScrollPosition >= 500 ) {
-                    navComp.style.backgroundColor="white";
-                    navComp.classList.add("shadow-sm");
-                }else{
-                    navComp.style.backgroundColor="transparent";
-                    navComp.classList.remove("shadow-sm");
-
-
-                }
-            });
-
-
-
-            function type() {
-                if (index < textToType.length) {
-                    textElement.value += textToType.charAt(index);
-                    index++;
-                    setTimeout(type, 150);
-                } else {
-                    appear();
-                    startScrolling();
-                }
-            }
-
-            function appear() {
-                results.forEach(function(result) {
-                    result.style.display = "flex";
-                    // Utilisez setTimeout pour permettre au navigateur de traiter le changement de display
-                    setTimeout(() => {
-                        result.style.opacity = "1";
-                    }, 10);
+        // Ajouter des boutons pour chaque image
+        imgArray.forEach((_, index) => {
+            let btn = document.createElement('button');
+            btn.className = 'point mx-2 my-4 bg-white h-4 w-4 rounded-2xl';
+            btn.addEventListener('click', () => {
+                // Retirer la surbrillance de tous les boutons
+                buttons.forEach(button => {
+                    button.classList.remove('highlight');
                 });
-            }
-
-            function startScrolling() {
-            const scrollableDiv = document.querySelector('.view-on-device');
-            scrollInterval = setInterval(() => {
-                // Incrémentez scrollTop pour faire défiler vers le bas
-                scrollableDiv.scrollTop += 1;
-
-                // Réinitialisez scrollTop à 0 si vous atteignez le bas
-                if (scrollableDiv.scrollTop >= scrollableDiv.scrollHeight - scrollableDiv.clientHeight) {
-                    scrollableDiv.scrollTop = 0;
-                }
-            }, 50); // Ajustez l'intervalle pour contrôler la vitesse de défilement
-        }
-
-        function stopScrolling() {
-            clearInterval(scrollInterval);
-        }
+                // Ajouter la surbrillance au bouton cliqué
+                btn.classList.add('highlight');
+                currentIndex = index;
+                container.style.backgroundImage = `url('src/img/img/${imgArray[currentIndex]}')`;
+            });
+            container.appendChild(btn);
+            buttons.push(btn);
         });
-    </script>
+
+        // Initialiser l'image de fond
+        container.style.backgroundImage = `url('src/img/img/${imgArray[0]}')`;
+
+        // Ajouter la surbrillance au premier bouton
+        if (buttons.length > 0) {
+            buttons[0].classList.add('highlight');
+        }
+
+        // Changer automatiquement les diapositives toutes les 3 secondes
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % imgArray.length;
+            container.style.backgroundImage = `url('src/img/img/${imgArray[currentIndex]}')`;
+
+            // Mettre à jour la surbrillance pour le bouton correspondant
+            buttons.forEach((button, index) => {
+                button.classList.toggle('highlight', index === currentIndex);
+            });
+        }, 3000);
+    }
+
+    slidesRound(["piece (1).jpg", "piece (2).jpg", "piece (3).jpg"], document.querySelector(".galerie"));
+    slidesRound(["logo.png", "R 1.png", "R 2.png"], document.querySelector(".slide"));
+
+
+    // Autres fonctions
+    const textElement = document.getElementById('search-content');
+    const textToType = "Pneus citroen";
+    const results = [
+        document.querySelector(".info-search-bar"),
+        document.querySelector(".search-results"),
+        document.querySelector(".blur-bg")
+    ];
+    let index = 0;
+    const scrollPositionToTrigger = 1200;
+    const navComp = document.querySelector('nav.computer');
+
+    window.addEventListener('scroll', () => {
+        const currentScrollPosition = window.scrollY || window.pageYOffset;
+        if (currentScrollPosition >= scrollPositionToTrigger && textToType !== textElement.value) {
+            type();
+        }
+    });
+
+    // Menu
+    window.addEventListener('scroll', () => {
+        const currentScrollPosition = window.scrollY || window.pageYOffset;
+        if (currentScrollPosition >= 500) {
+            navComp.style.backgroundColor = "white";
+            navComp.classList.add("shadow-sm");
+        } else {
+            navComp.style.backgroundColor = "transparent";
+            navComp.classList.remove("shadow-sm");
+        }
+    });
+
+    function type() {
+        if (index < textToType.length) {
+            textElement.value += textToType.charAt(index);
+            index++;
+            setTimeout(type, 150);
+        } else {
+            appear();
+            startScrolling();
+        }
+    }
+
+    function appear() {
+        results.forEach(function(result) {
+            result.style.display = "flex";
+            setTimeout(() => {
+                result.style.opacity = "1";
+            }, 10);
+        });
+    }
+
+    function startScrolling() {
+        const scrollableDiv = document.querySelector('.view-on-device');
+        scrollInterval = setInterval(() => {
+            scrollableDiv.scrollTop += 1;
+            if (scrollableDiv.scrollTop >= scrollableDiv.scrollHeight - scrollableDiv.clientHeight) {
+                scrollableDiv.scrollTop = 0;
+            }
+        }, 50);
+    }
+
+    function stopScrolling() {
+        clearInterval(scrollInterval);
+    }
+});
+</script>
 
     <!--Start of Tawk.to Script-->
 <script type="text/javascript">

@@ -1,31 +1,34 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transition avec Opacity et Visibility</title>
-    <style>
-        .element {
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
-        }
-
-        .element.visible {
-            opacity: 1;
-        }
-    </style>
+    <title>Document</title>
 </head>
 <body>
-    <button onclick="toggleElement()">Afficher/Masquer l'élément</button>
-    <div id="myElement" class="element">
-        Ceci est un élément qui apparaît et disparaît avec une transition.
-    </div>
+    
+
 
     <script>
-        function toggleElement() {
-            const element = document.getElementById('myElement');
-            element.classList.toggle('visible');
+        // une div button, une image
+        function slidesRound(imgArray,container){
+            var divButton = container.querySelector(".buttons-container");
+            var img = container.querySelector(".image-container");
+            img.src = `src/img/img/${imgArray[1]}`;
+            imgArray.forEach(img => {
+                divButton.innerHTML += `<button class="point mx-2 my-4 bg-white h-4 w-4 rounded-2xl"></button>`;
+            });
+            index = 0;
+            for(var btn of divButton.childNodes) {
+                btn.addEventListener("click",()=>{
+                    img.src=imgArray[index];
+                })
+                index++;
+            }
         }
+
+
+
     </script>
 </body>
 </html>
