@@ -100,6 +100,20 @@ h1,h2{
 
 }
 
+.subtitle{
+
+
+font-family: 'Sora';
+font-style: normal;
+font-weight: 800;
+font-size: 20px;
+line-height: 25px;
+text-transform: uppercase;
+color: #000000;
+
+
+}
+
 .bloc-1-home .computer h1, .computer .inside-box {
     text-align: left;
     line-height: 3rem;
@@ -148,6 +162,7 @@ h2{
 
 .icon{
     width:var(--wh-small-icon);
+    height: var(--wh-small-icon);
     
 }
 
@@ -199,7 +214,7 @@ i{
     width:2rem;
 }
 
-.info-search-bar div{
+.view-on-device .info-search-bar div{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -222,7 +237,7 @@ i{
     justify-content: end;
 }
 
-.info-search-bar .btn button{
+.info-search-bar .btn>button{
     display: flex;
     width: fit-content;
     align-items: center;
@@ -255,6 +270,15 @@ i{
     height:18.25rem;
     background-color: var(--light-grey);
     margin:0 0 1rem 0;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 3s ease-in-out;
+    opacity: 1;
+    
 }
 
 
@@ -336,7 +360,7 @@ i{
     padding:5rem;
 }
 
-.info-search-bar, .search-results, .blur-bg {
+.view-on-device .info-search-bar,.view-on-device .search-results,.view-on-device .blur-bg {
             display: none;
             opacity: 0;
             transition: opacity 2s ease-in;
@@ -436,9 +460,14 @@ footer{
     height:fit-content;
 }
 
-.search-results div:nth-last-child(n+3){
+.view-on-device .search-results div:nth-last-child(1),
+.view-on-device .search-results div:nth-last-child(2),
+.view-on-device .search-results div:nth-last-child(3),
+.view-on-device .search-results div:nth-last-child(4){
     display:none;
 }
+
+
 
 .view-on-device{
     transform: scale(0.6);
