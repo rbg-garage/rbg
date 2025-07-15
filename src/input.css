@@ -36,6 +36,11 @@ body {
     --height-blur-band:11.25rem;
 }
 
+.bg-degrade{
+    background: var(--degrade);
+    color:white;
+}
+
 .computer{
     display:flex;
 }
@@ -204,6 +209,8 @@ i{
 .search-bar button {
     height:5rem;
     width:20%;
+    max-width: 5rem;
+    min-width: 2rem;
     background: var(--degrade);
     display: flex;
  
@@ -235,9 +242,10 @@ i{
 
 .info-search-bar .btn{
     justify-content: end;
+    flex-direction: row;
 }
 
-.info-search-bar .btn>button{
+.info-search-bar .btn>button,select{
     display: flex;
     width: fit-content;
     align-items: center;

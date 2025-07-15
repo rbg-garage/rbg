@@ -1,4 +1,4 @@
-class Piece {
+export class Piece {
   id;
   libelle;
   marque;
@@ -89,7 +89,7 @@ class Piece {
         currentIndex = index;
         imgDiv.style.backgroundImage = `url('src/img/img/${this.img[currentIndex]}')`;
       });
-      this.div.appendChild(btn);
+      imgDiv.appendChild(btn);
       buttons.push(btn);
     });
 
@@ -109,4 +109,3 @@ class Piece {
   }
 }
 
-module.exports = Piece;

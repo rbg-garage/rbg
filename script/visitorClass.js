@@ -1,4 +1,4 @@
-class Visitor{
+export class Visitor{
     listPieces;
 
     constructor(listPieces){
@@ -90,4 +90,3 @@ class Visitor{
 
 }
 
-module.exports = Piece;

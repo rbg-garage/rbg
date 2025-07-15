@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="shortcut icon" href="src/img/logo/rbg.png" type="image/x-icon">
     <link rel="stylesheet" href="src/output.css">
+    <script type="module" src="script/script.js"  defer></script>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap');
 
@@ -41,34 +42,40 @@
     </header>
 
 
-    <main class="pt-64 px-16">
+    <main class="pt-32 px-8 md:px-16">
 
         <h2>Nos pièces</h3>
 
         <p>Rechercher parmis les références qui vous sont proposées les éléments qui correspondent à votre véhicule.</p>
 
          <div>
-                 <div class="search-bar">
+                 <div class="search-bar w-full">
                     <input type="text" id="search-content" >
                     <button id="search-action"><img src="src/img/icon/search_svgrepo.com.png" alt="" class="icon"></button>
             </div>
 
-            <div class="info-search-bar flex justify-between w-100% ">
+            <div class="info-search-bar flex flex-wrap justify-between w-100% ">
 
                 <div>
                     <span class="search-name">Tout</span>
                     <span class="results-number" >18 résultats</span>
                 </div>
 
-                <div class="btn">
+                <div class="btn flex mx-auto my-[1rem]  sm:m-0 flex-wrap">
                     <button class="filter"><img src="src/img/icon/filter_svgrepo.com.png" alt="" class="icon">Filtre</button> 
-                    <button class="orderby"> <img src="src/img/icon/sort-up_svgrepo.com.png" alt="" class="icon">Trier par</button> 
+                    <select class="orderby" id="orderby" name="orderby">
+                        <option value=""><img src="src/img/icon/sort-up_svgrepo.com.png" alt="" class="icon">Trier par :</option>
+                        <option value="croissant">Prix croissant</option>
+                        <option value="decroissant">Prix décroissant</option>
+                        <option value="recent">Récent</option>
+                        <option value="ancien">Ancien</option>
+                    </select>
 
-                    <div class="popup fixed flex inset-0 items-center justify-center backdrop-blur bg-opacity-50 ">
+                    <div class="popup-filter fixed flex inset-0 items-center justify-center backdrop-blur bg-opacity-50 ">
                         <div class="flex-col justify-start bg-white p-6 w-[70%] shadow-lg rounded-4xl">
                             <div class="flex items-center justify-between">
                                 <h2 class="subtitle">Filtres</h2>
-                                <img src="src/img/icon/close_svgrepo.com.png" alt="" class="icon">
+                                <img src="src/img/icon/close_svgrepo.com.png" alt="" class="icon" id="close">
                             </div>
 
                             <div class="flex flex-col">
@@ -76,7 +83,7 @@
                                     <legend>Catégorie :</legend>
                                     <div class="flex flex-wrap">
                                     <div class="flex">
-                                        <input type="checkbox" id="pneu" name="category" value="pneu" checked />
+                                        <input type="checkbox" id="pneu" name="category" value="pneu"  />
                                         <label for="pneu">Pneu</label>
                                     </div>
                                     <div class="flex">
@@ -91,7 +98,7 @@
                                     <legend>Marque :</legend>
                                     <div class="flex flex-wrap">
                                     <div class="flex">
-                                        <input type="checkbox" id="citroen" name="marque" value="citroen" checked />
+                                        <input type="checkbox" id="citroen" name="marque" value="citroen"  />
                                         <label for="citroen">Pneu</label>
                                     </div>
                                     <div class="flex">
@@ -106,7 +113,7 @@
                                     <legend>Etat :</legend>
                                     <div class="flex flex-wrap">
                                     <div class="flex">
-                                        <input type="checkbox" id="tresbonetat" name="etat" value="Très bon état" checked />
+                                        <input type="checkbox" id="tresbonetat" name="etat" value="Très bon état"  />
                                         <label for="tresbonetat">Très bon état</label>
                                     </div>
                                     <div class="flex">
@@ -124,8 +131,12 @@
                                     <legend>Disponibilité :</legend>
                         <div class="flex flex-wrap">
                                     <div class="flex">
-                                        <input type="radio" id="disponible" name="disponibilite" value="Disponible" checked />
+                                        <input type="radio" id="disponible" name="disponibilite" value="Disponible"  />
                                         <label for="disponible">Très bon état</label>
+                                    </div>
+                                    <div class="flex">
+                                        <input type="checkbox" id="indisponible" name="disponibilite" value="Indisponible" />
+                                        <label for="indisponible">Peugeot</label>
                                     </div>
                                     <div class="flex">
                                         <input type="checkbox" id="indisponible" name="disponibilite" value="Indisponible" />
@@ -134,7 +145,7 @@
                                     </div>
                                     </fieldset>
 
-                                    <button type="submit" class="m-auto cta-1-dark">Réserver</button>
+                                    <button type="submit" class="m-auto cta-1-dark">Rechercher</button>
 
 
                             </div>
@@ -366,7 +377,7 @@
     <a href="index.html#apropos">A propos</a>
     <a href="index.html#contact">Contact</a>
 </div>
-    </footer>
+</footer>
 
 
 
@@ -376,6 +387,46 @@
 
 
 <script>document.addEventListener('DOMContentLoaded', () => {
+
+    // popup de filtres : 
+
+    var openFilterPopup = document.querySelector(".filter");
+    var closeFilterPopup = document.getElementById("close");
+    var popupFilter = document.querySelector(".popup-filter");
+
+    popupFilter.style.display="none";
+
+    openFilterPopup.addEventListener("click",()=>{
+        popupFilter.style.display="flex";
+
+    });
+
+    closeFilterPopup.addEventListener("click",()=>{
+        popupFilter.style.display = "none";
+    })
+
+    // le bouton est coloré quand une option est sélectionnée
+
+    var checkboxes = document.querySelectorAll('.popup-filter input[type="checkbox"]');
+
+   function updateSearchButtonState() {
+        var isAnyChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
+
+        if (isAnyChecked) {
+            openFilterPopup.classList.add('bg-degrade');
+        } else {
+            openFilterPopup.classList.remove('bg-degrade');
+        }
+    }
+
+    // à mettre dans la fonction qui reçoit les filtres 
+
+
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', updateSearchButtonState);
+    });
+
+
   function slidesRound(imgArray, container) {
         let currentIndex = 0;
         const buttons = [];

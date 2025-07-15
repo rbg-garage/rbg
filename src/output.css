@@ -202,6 +202,9 @@
   .my-14 {
     margin-block: calc(var(--spacing) * 14);
   }
+  .my-\[1rem\] {
+    margin-block: 1rem;
+  }
   .my-\[4rem\] {
     margin-block: 4rem;
   }
@@ -237,9 +240,6 @@
   }
   .h-\[7\.8125rem\] {
     height: 7.8125rem;
-  }
-  .h-\[var\(--icon-size\)\] {
-    height: var(--icon-size);
   }
   .h-screen {
     height: 100vh;
@@ -346,8 +346,8 @@
   .p-\[2rem\] {
     padding: 2rem;
   }
-  .px-16 {
-    padding-inline: calc(var(--spacing) * 16);
+  .px-8 {
+    padding-inline: calc(var(--spacing) * 8);
   }
   .py-8 {
     padding-block: calc(var(--spacing) * 8);
@@ -355,8 +355,8 @@
   .py-\[3rem\] {
     padding-block: 3rem;
   }
-  .pt-64 {
-    padding-top: calc(var(--spacing) * 64);
+  .pt-32 {
+    padding-top: calc(var(--spacing) * 32);
   }
   .text-center {
     text-align: center;
@@ -383,6 +383,11 @@
     --tw-backdrop-blur: blur(8px);
     -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
     backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  }
+  .sm\:m-0 {
+    @media (width >= 40rem) {
+      margin: calc(var(--spacing) * 0);
+    }
   }
   .sm\:w-\[45\%\] {
     @media (width >= 40rem) {
@@ -434,6 +439,11 @@
       align-items: center;
     }
   }
+  .md\:px-16 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 16);
+    }
+  }
   .md\:py-0 {
     @media (width >= 48rem) {
       padding-block: calc(var(--spacing) * 0);
@@ -470,6 +480,10 @@ body {
   --montserrat: "Montserrat";
   --sora: "Sora";
   --height-blur-band: 11.25rem;
+}
+.bg-degrade {
+  background: var(--degrade);
+  color: white;
 }
 .computer {
   display: flex;
@@ -601,6 +615,8 @@ i {
 .search-bar button {
   height: 5rem;
   width: 20%;
+  max-width: 5rem;
+  min-width: 2rem;
   background: var(--degrade);
   display: flex;
 }
@@ -624,8 +640,9 @@ i {
 }
 .info-search-bar .btn {
   justify-content: end;
+  flex-direction: row;
 }
-.info-search-bar .btn>button {
+.info-search-bar .btn>button,select {
   display: flex;
   width: fit-content;
   align-items: center;
