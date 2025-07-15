@@ -265,7 +265,7 @@ i{
 
 .search-results .item-search-view{
     width:22.188rem;
-    height:32.563rem;
+    min-height:32.563rem;
     border:var(--border-blue);
     border-radius:var(--border-radius);
     margin:1rem;

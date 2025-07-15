@@ -59,13 +59,13 @@ export class Piece {
             <span>Citroën</span>
           </div>
           <span class="category">Catégorie : Carosserie</span>
-          <span class="description">${this.description}</span>
+          <span class="description hidden">${this.description}</span>
           <div class="state-price-item">
             <span class="state">Bon état</span>
             <h3>17,00 &euro;</h3>
           </div>
           <input type="hidden" value="${this.id}" name="id">
-          <input type="hidden" value="${this.dateTime}" name="id">
+          <input type="hidden" value="${this.dateTime}" name="datetime">
           <div class="cta-1-dark">Réserver</div>
         </div>
       `;
