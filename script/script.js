@@ -42,6 +42,7 @@ function removeAllChildNodes(parent) {
   var conteneur = document.querySelector(".search-results");
   var searchContent = document.getElementById("search-content");
   var searchButton = document.getElementById("search-action");
+  var nameSearch = document.querySelector(".search-name");
 
   searchButton.addEventListener("click",()=>{
     if(searchContent.value!==""){
@@ -51,6 +52,7 @@ function removeAllChildNodes(parent) {
         array.forEach(element => {
           conteneur.appendChild(element.construireDiv());
         });
+        
 
       }else if(visitor.rechercheDescr(searchContent.value)!==null){
          var array = visitor.rechercheDescr(searchContent.value);
@@ -58,15 +60,26 @@ function removeAllChildNodes(parent) {
           array.forEach(element => {
           conteneur.appendChild(element.construireDiv());
         });
+
+      
+
       }else{
         removeAllChildNodes(conteneur);
         alert("Pas de résultats ! ");
         conteneur.innerHTML += "<h2 class='subtitle'>Aucun résultat.</h2>";
+        nameSearch.value = searchContent;
+
       }
+
+nameSearch.textContent = searchContent.value;
     }else{
-      array = visitor.lis
+      array = visitor.listePieces;
       array.forEach(element => {
           conteneur.appendChild(element.construireDiv());
       });
     }
   });
+
+  var filterSearchAction = document.querySelector("filter-search-action");
+
+
