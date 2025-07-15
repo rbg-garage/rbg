@@ -3,32 +3,521 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" href="src/output.css">
+    <script type="module" src="script/script.js"  defer></script>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap');
+
+</style>
     <title>Document</title>
 </head>
 <body>
+    <header class="fixed w-full z-50">
+
+<nav class="computer  w-full flex flex-row items-center py-8 white bg-white shadow-sm">
+<a href="index.html" class="mx-8 " ><img src="src/img/logo/logo.png" alt="" class="w-[10rem]"></a>
+<a href="index.html#services" class="mx-8" >Nos services</a>
+<a href="pieces.html" class="mx-8" >Nos pièces</a>
+<a href="index.html#garage" class="mx-8" >Le garage</a>
+<a href="index.html#apropos" class="mx-8" >A propos</a>
+<a href="index.html#contact" class="mx-8" >Contact</a><div class="rsx-bar flex flex-row items-center">
+ <a href="tel:+33659281551"><i class="fa-solid fa-phone"></i> </a>
+  </div>
+
+</nav>
+
+<nav class="mobile bg-white  w-full shadow-sm p-[0.5rem]">
+<a href="index.html#accueil" class="flex text-xs flex-col items-center m-2"><img src="src/img/icon/home_svgrepo.com.png" alt="" class="icon m-auto w-[var(--wh-small-icon)]">Accueil</a>
+<a href="pieces.html" class="flex flex-col text-xs items-center m-2"><img src="src/img/icon/settings_svgrepo.com.png" alt="" class="icon m-auto w-[var(--wh-small-icon)]">Pièces</a>
+<a href="index.html" class="flex flex-col text-xs items-center m-2"><img src="src/img/logo/logo.png" alt="" class="logo w-[5.063rem]"></a>
+<a href="index.html#services" class="flex text-xs flex-col items-center m-2"><img src="src/img/icon/service_svgrepo.com.png" alt="" class="icon  m-auto w-[var(--wh-small-icon)]">Services</a>
+<a href="index.html#contact" class="flex text-xs flex-col items-center m-2"><img src="src/img/icon/phone_svgrepo.com.png" alt="" class="icon  m-auto w-[1rem]">Contact</a>
+</nav>
+
+    </header>
+    <main>
+        <div class="details">
+<div class="bandeau">
+    <h2 class="subtitle">Détails</h2>
+    <img src="src/img/icon/close_svgrepo.com.png" alt="" class="icon">
+</div>
+<div class="item-search-view">
+                    <div class="img">
+                        <button class="arrow-left"></button>
+                        <button class="arrow-right"></button>
+                    </div>
+                    <div class="text-item">
+                    <div class="title-item">
+                        <h3>Pneus</h3>
+                        <span>Citroën</span>
+                    </div>
+                    <span class="category">Catégorie : Carosserie</span>
+                    <span class="description">Beaux pneus que je vends icci ihihihihihi</span>
+                    <div class="state-price-item">
+                        <span class="state">Bon état</span>
+                        <h3>7,00 &euro;</h3>
+                    </div>
+
+                    <div class="cta-1-dark">Réserver</div>
+
+                    </div>
+                    
+
+
+                </div>
+
+</div>
+<div class="pt-32 px-8 md:px-16">
+      
     
+         <div>
+                 <div class="search-bar w-full">
+                    <input type="text" id="search-content" >
+                    <button id="search-action"><img src="src/img/icon/search_svgrepo.com.png" alt="" class="icon"></button>
+            </div>
+
+            <div class="info-search-bar flex flex-wrap justify-between w-100% ">
+
+                <div>
+                    <span class="search-name">Tout</span>
+                    <span class="results-number" >18 résultats</span>
+                </div>
+
+                <div class="btn flex mx-auto my-[1rem]  sm:m-0 flex-wrap">
+                    <button class="filter"><img src="src/img/icon/filter_svgrepo.com.png" alt="" class="icon">Filtre</button> 
+                    <select class="orderby" id="orderby" name="orderby">
+                        <option value=""><img src="src/img/icon/sort-up_svgrepo.com.png" alt="" class="icon">Trier par :</option>
+                        <option value="croissant">Prix croissant</option>
+                        <option value="decroissant">Prix décroissant</option>
+                        <option value="recent">Récent</option>
+                        <option value="ancien">Ancien</option>
+                    </select>
+
+                    <div class="popup-filter fixed flex inset-0 items-center justify-center backdrop-blur bg-opacity-50 ">
+                        <div class="flex-col justify-start bg-white p-6 w-[70%] shadow-lg rounded-4xl">
+                            <div class="flex items-center justify-between">
+                                <h2 class="subtitle">Filtres</h2>
+                                <img src="src/img/icon/close_svgrepo.com.png" alt="" class="icon" id="close">
+                            </div>
+
+                            <div class="flex flex-col">
+                                     <fieldset>
+                                    <legend>Catégorie :</legend>
+                                    <div class="flex flex-wrap">
+                                    <div class="flex">
+                                        <input type="checkbox" id="pneu" name="category" value="pneu"  />
+                                        <label for="pneu">Pneu</label>
+                                    </div>
+                                    <div class="flex">
+                                        <input type="checkbox" id="moteur" name="category" value="moteur" />
+                                        <label for="moteur">Moteur</label>
+                                    </div>
+                                    </div>
+                                    </fieldset>
+
+                                    <fieldset>
+
+                                    <legend>Marque :</legend>
+                                    <div class="flex flex-wrap">
+                                    <div class="flex">
+                                        <input type="checkbox" id="citroen" name="marque" value="citroen"  />
+                                        <label for="citroen">Pneu</label>
+                                    </div>
+                                    <div class="flex">
+                                        <input type="checkbox" id="peugeot" name="marque" value="peugeot" />
+                                        <label for="peugeot">Peugeot</label>
+                                    </div>
+                                    </div>
+                                    </fieldset>
+
+                                    <fieldset>
+
+                                    <legend>Etat :</legend>
+                                    <div class="flex flex-wrap">
+                                    <div class="flex">
+                                        <input type="checkbox" id="tresbonetat" name="etat" value="Très bon état"  />
+                                        <label for="tresbonetat">Très bon état</label>
+                                    </div>
+                                    <div class="flex">
+                                        <input type="checkbox" id="bonetat" name="etat" value="Bon état" />
+                                        <label for="bonetat">Bon état</label>
+                                    </div>
+                                    <div class="flex">
+                                        <input type="checkbox" id="correct" name="etat" value="Correct" />
+                                        <label for="correct">Correct</label>
+                                    </div></div>
+                                    </fieldset>
+
+                                     <fieldset>
+
+                                    <legend>Disponibilité :</legend>
+                        <div class="flex flex-wrap">
+                                    <div class="flex">
+                                        <input type="radio" id="disponible" name="disponibilite" value="Disponible"  />
+                                        <label for="disponible">Très bon état</label>
+                                    </div>
+                                    <div class="flex">
+                                        <input type="checkbox" id="indisponible" name="disponibilite" value="Indisponible" />
+                                        <label for="indisponible">Peugeot</label>
+                                    </div>
+                                    <div class="flex">
+                                        <input type="checkbox" id="indisponible" name="disponibilite" value="Indisponible" />
+                                        <label for="indisponible">Peugeot</label>
+                                    </div>
+                                    </div>
+                                    </fieldset>
+
+                                    <button type="submit" class="m-auto cta-1-dark">Rechercher</button>
 
 
-    <script>
-        // une div button, une image
-        function slidesRound(imgArray,container){
-            var divButton = container.querySelector(".buttons-container");
-            var img = container.querySelector(".image-container");
-            img.src = `src/img/img/${imgArray[1]}`;
-            imgArray.forEach(img => {
-                divButton.innerHTML += `<button class="point mx-2 my-4 bg-white h-4 w-4 rounded-2xl"></button>`;
-            });
-            index = 0;
-            for(var btn of divButton.childNodes) {
-                btn.addEventListener("click",()=>{
-                    img.src=imgArray[index];
-                })
-                index++;
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             
+           </div>
+
+            <div class="search-results">
+
+                
+
+                <div class="item-search-view">
+                    <div class="img">
+                        <button class="arrow-left"></button>
+                        <button class="arrow-right"></button>
+                    </div>
+                    <div class="text-item">
+                    <div class="title-item">
+                        <h3>Pneus</h3>
+                        <span>Citroën</span>
+                    </div>
+                    <span class="category">Catégorie : Carosserie</span>
+                    <div class="state-price-item">
+                        <span class="state">Bon état</span>
+                        <h3>17,00 &euro;</h3>
+                    </div>
+
+                    <div class="cta-1-dark">Réserver</div>
+
+                    </div>
+                    
+
+
+                </div>
+
+                
+<div class="item-search-view">
+                    <div class="img">
+                        <button class="arrow-left"></button>
+                        <button class="arrow-right"></button>
+                    </div>
+                    <div class="text-item">
+                    <div class="title-item">
+                        <h3>Pneus</h3>
+                        <span>Citroën</span>
+                    </div>
+                    <span class="category">Catégorie : Carosserie</span>
+                    <div class="state-price-item">
+                        <span class="state">Bon état</span>
+                        <h3>17,00 &euro;</h3>
+                    </div>
+
+                    <div class="cta-1-dark">Réserver</div>
+
+                    </div>
+                    
+
+
+                </div>
+               <div class="item-search-view">
+                    <div class="img slide">
+                        <button class="arrow-left"></button>
+                        <button class="arrow-right"></button>
+                    </div>
+                    <div class="text-item">
+                    <div class="title-item">
+                        <h3>Pneus</h3>
+                        <span>Citroën</span>
+                    </div>
+                    <span class="category">Catégorie : Carosserie</span>
+                    <div class="state-price-item">
+                        <span class="state">Bon état</span>
+                        <h3>17,00 &euro;</h3>
+                    </div>
+
+                    <div class="cta-1-dark">Réserver</div>
+
+                    </div>
+                    
+
+
+                </div>
+                <div class="item-search-view">
+                    <div class="img">
+                        <button class="arrow-left"></button>
+                        <button class="arrow-right"></button>
+                    </div>
+                    <div class="text-item">
+                    <div class="title-item">
+                        <h3>Pneus</h3>
+                        <span>Citroën</span>
+                    </div>
+                    <span class="category">Catégorie : Carosserie</span>
+                    <div class="state-price-item">
+                        <span class="state">Bon état</span>
+                        <h3>17,00 &euro;</h3>
+                    </div>
+
+                    <div class="cta-1-dark">Réserver</div>
+
+                    </div>
+                    
+
+
+                </div>
+
+                <div class="item-search-view">
+                    <div class="img">
+                        <button class="arrow-left"></button>
+                        <button class="arrow-right"></button>
+                    </div>
+                    <div class="text-item">
+                    <div class="title-item">
+                        <h3>Pneus</h3>
+                        <span>Citroën</span>
+                    </div>
+                    <span class="category">Catégorie : Carosserie</span>
+                    <div class="state-price-item">
+                        <span class="state">Bon état</span>
+                        <h3>17,00 &euro;</h3>
+                    </div>
+
+                    <div class="cta-1-dark">Réserver</div>
+
+                    </div>
+                    
+
+
+                </div>
+                <div class="item-search-view">
+                    <div class="img">
+                        <button class="arrow-left"></button>
+                        <button class="arrow-right"></button>
+                    </div>
+                    <div class="text-item">
+                    <div class="title-item">
+                        <h3>Pneus</h3>
+                        <span>Citroën</span>
+                    </div>
+                    <span class="category">Catégorie : Carosserie</span>
+                    <div class="state-price-item">
+                        <span class="state">Bon état</span>
+                        <h3>17,00 &euro;</h3>
+                    </div>
+
+                    <div class="cta-1-dark">Réserver</div>
+
+                    </div>
+                    
+
+
+                </div>
+                <div class="item-search-view">
+                    <div class="img">
+                        <button class="arrow-left"></button>
+                        <button class="arrow-right"></button>
+                    </div>
+                    <div class="text-item">
+                    <div class="title-item">
+                        <h3>Pneus</h3>
+                        <span>Citroën</span>
+                    </div>
+                    <span class="category">Catégorie : Carosserie</span>
+                    <div class="state-price-item">
+                        <span class="state">Bon état</span>
+                        <h3>17,00 &euro;</h3>
+                    </div>
+
+                    <div class="cta-1-dark">Réserver</div>
+
+                    </div>
+                    
+
+
+                </div>
+                <div class="item-search-view">
+                    <div class="img">
+                        <button class="arrow-left"></button>
+                        <button class="arrow-right"></button>
+                    </div>
+                    <div class="text-item">
+                    <div class="title-item">
+                        <h3>Pneus</h3>
+                        <span>Citroën</span>
+                    </div>
+                    <span class="category">Catégorie : Carosserie</span>
+                    <div class="state-price-item">
+                        <span class="state">Bon état</span>
+                        <h3>17,00 &euro;</h3>
+                    </div>
+
+                    <div class="cta-1-dark">Réserver</div>
+
+                    </div>
+                    
+
+
+                </div>
+
+            </div>
+
+          
+
+           
+
+            </div>
+</div>
+
+    </main>
+
+
+
+
+
+<script>document.addEventListener('DOMContentLoaded', () => {
+
+
+    //fonction afficher les details : 
+
+    function details(event){
+
+    const button = event.target;
+
+    const divContainer = button.parentElement;
+
+    var divDetails = document.createElement("div");
+    divDetails.classList.add("details");
+
+    var bandeau = divDetails.createElement("div");
+    bandeau.classList.add("bandeau flex justify-between");
+    divDetails.appendChild(bandeau);
+
+    var title = bandeau.createElement("h2");
+    title.classList.add("subtitle");
+
+    var close = bandeau.createElement("img");
+    close.id="close";
+    close.alt="close";
+    close.src = "src/img/icon/close_svgrepo.com.png";
+    close.classList.add("icon");
+
+    bandeau.appendChild(title);
+    bandeau.appendChild(close);
+
+    close.addEventListener("click",()=>{
+        closedetails();
+    })
+
+    var body = document.querySelector("body");
+    body.appendChild(divDetails);
+    var cloneDiv = divContainer.cloneNode(true);
+    cloneDiv.querySelector(".description").classList.remove("hidden");
+    divDetails.appendChild();
+
+
+
+    }
+
+    function closedetails(){
+        const detailsDiv = document.querySelector(".details");
+            if (detailsDiv) {
+                detailsDiv.querySelector(".description").classList.add("hidden");
+                detailsDiv.remove();
             }
+
+    }
+
+    // popup de filtres : 
+
+    var openFilterPopup = document.querySelector(".filter");
+    var closeFilterPopup = document.getElementById("close");
+    var popupFilter = document.querySelector(".popup-filter");
+
+    popupFilter.style.display="none";
+
+    openFilterPopup.addEventListener("click",()=>{
+        popupFilter.style.display="flex";
+
+    });
+
+    closeFilterPopup.addEventListener("click",()=>{
+        popupFilter.style.display = "none";
+    })
+
+    // le bouton est coloré quand une option est sélectionnée
+
+    var checkboxes = document.querySelectorAll('.popup-filter input[type="checkbox"]');
+
+   function updateSearchButtonState() {
+        var isAnyChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
+
+        if (isAnyChecked) {
+            openFilterPopup.classList.add('bg-degrade');
+        } else {
+            openFilterPopup.classList.remove('bg-degrade');
+        }
+    }
+
+    // à mettre dans la fonction qui reçoit les filtres 
+
+
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', updateSearchButtonState);
+    });
+
+
+  function slidesRound(imgArray, container) {
+        let currentIndex = 0;
+        const buttons = [];
+
+        // Ajouter des boutons pour chaque image
+        imgArray.forEach((_, index) => {
+            let btn = document.createElement('button');
+            btn.className = 'point mx-2 my-4 bg-white h-4 w-4 rounded-2xl';
+            btn.addEventListener('click', () => {
+                // Retirer la surbrillance de tous les boutons
+                buttons.forEach(button => {
+                    button.classList.remove('highlight');
+                });
+                // Ajouter la surbrillance au bouton cliqué
+                btn.classList.add('highlight');
+                currentIndex = index;
+                container.style.backgroundImage = `url('src/img/img/${imgArray[currentIndex]}')`;
+            });
+            container.appendChild(btn);
+            buttons.push(btn);
+        });
+
+        // Initialiser l'image de fond
+        container.style.backgroundImage = `url('src/img/img/${imgArray[0]}')`;
+
+        // Ajouter la surbrillance au premier bouton
+        if (buttons.length > 0) {
+            buttons[0].classList.add('highlight');
         }
 
+        // Changer automatiquement les diapositives toutes les 3 secondes
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % imgArray.length;
+            container.style.backgroundImage = `url('src/img/img/${imgArray[currentIndex]}')`;
 
+            // Mettre à jour la surbrillance pour le bouton correspondant
+            buttons.forEach((button, index) => {
+                button.classList.toggle('highlight', index === currentIndex);
+            });
+        }, 3000);
+    }
 
-    </script>
+});</script>
 </body>
 </html>

@@ -45,7 +45,7 @@ export class Piece {
           </div>
           <input type="hidden" value="${this.id}" name="id">
           <input type="hidden" value="${this.dateTime}" name="id">
-          <div class="cta-1-dark">Réserver</div>
+          <div class="cta-1-dark" onclick="details(event)">Réserver</div>
         </div>
       `;
     } else {

@@ -115,6 +115,7 @@ font-size: 20px;
 line-height: 25px;
 text-transform: uppercase;
 color: #000000;
+letter-spacing: 0;
 
 
 }
@@ -263,17 +264,67 @@ i{
 }
 
 
-.search-results .item-search-view{
+.item-search-view{
     width:22.188rem;
     min-height:32.563rem;
     border:var(--border-blue);
     border-radius:var(--border-radius);
     margin:1rem;
     overflow: hidden;
-   
+   background-color: white;
 }
 
-.search-results .item-search-view .img{
+.details{
+position: fixed;
+display: flex;
+flex-direction: column;
+justify-items: center;
+align-items: center;
+width:100vw;
+height:100vh;
+background-color: var(--light-blue);
+padding:1rem;
+padding-top:5rem;
+}
+
+.details .bandeau{
+   display: flex;
+   justify-content: space-between;
+   align-items: center; 
+   width:100vw;
+   padding:2rem;
+}
+
+.details .item-search-view{
+    width:90%;
+    display: flex;
+    border:none;
+    padding:2rem;
+    align-items: center;
+    overflow: scroll;
+
+}
+
+.details .item-search-view .img{
+    width:50%;
+    height:100%;
+    margin:0;
+}
+.details .item-search-view .text-item{
+    width:50%;
+    margin: auto;
+    height:100%;
+    padding:2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.details .item-search-view .text-item .description{
+   display: block;
+}
+
+.item-search-view .img{
     width:22.188rem;
     height:18.25rem;
     background-color: var(--light-grey);
@@ -290,38 +341,39 @@ i{
 }
 
 
-.search-results .item-search-view .text-item{
+.item-search-view .text-item{
     padding: 0 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height:35%;
+    
 }
 
-.search-results .item-search-view .text-item .title-item,
-.search-results .item-search-view .text-item .state-price-item{ 
+.item-search-view .text-item .title-item,
+.item-search-view .text-item .state-price-item{ 
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.search-results .item-search-view .text-item .title-item h3{ 
+.item-search-view .text-item .title-item h3{ 
     font-size: var(--size-title);
     font-weight: var(--weight-title);
 }
 
-.search-results .item-search-view .text-item .category{ 
+.item-search-view .text-item .category{ 
     color:var(--dark-grey);
 
 }
 
 
-.search-results .item-search-view .text-item .state-price-item .state{ 
+.item-search-view .text-item .state-price-item .state{ 
     color:var(--dark-blue);
 
 }
 
-.search-results .item-search-view .text-item .state-price-item h3{ 
+.item-search-view .text-item .state-price-item h3{ 
     font-weight: 700;
     font-size: var(--size-small-title);
 }
@@ -512,7 +564,33 @@ footer{
     justify-content: center;
 }
 
+.details{
+padding:0;
+padding-top:3rem;
+}
+.details .bandeau{
+    padding-bottom: 0;
+}
 
+.details .item-search-view{
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    flex-direction: column; 
+}
+
+.details .item-search-view .img{
+   width: 100%;
+   max-width: 30rem;
+   min-height:25rem;
+}
+
+.details .item-search-view .text-item{
+    width: 100%;
+    max-width: 30rem;
+    padding: 1rem 0;
+
+}
 
 
 
