@@ -59,7 +59,7 @@
 
                 <div>
                     <span class="search-name">Tout</span>
-                    <span class="results-number" >18 résultats</span>
+                    <span class="results-number"></span>
                 </div>
 
                 <div class="btn flex mx-auto my-[1rem]  sm:m-0 flex-wrap">
@@ -285,6 +285,26 @@ function closedetails() {
     
 
 document.addEventListener('DOMContentLoaded', () => {
+
+const resultDiv = document.querySelector('.search-results');
+
+// Sélectionnez l'élément pour afficher le compteur
+const childCounter = document.querySelector('.results-number');
+
+// Mettez à jour le compteur initialement
+childCounter.textContent = resultDiv.childElementCount + " résultats";
+
+// Créez une instance de MutationObserver pour observer les changements dans le nombre d'enfants
+const observer = new MutationObserver(function() {
+    childCounter.textContent = resultDiv.childElementCount + " résultats";
+});
+
+// Configuration de l'observateur pour observer les changements dans les enfants
+const config = { childList: true };
+
+// Commencez à observer la div avec la configuration spécifiée
+observer.observe(resultDiv, config);
+
 
 const reserveButtons = document.querySelectorAll('.item-search-view .cta-1-dark');
     reserveButtons.forEach(button => {

@@ -66,7 +66,7 @@ export class Piece {
           </div>
           <input type="hidden" value="${this.id}" name="id">
           <input type="hidden" value="${this.dateTime}" name="datetime">
-          <div class="cta-1-dark">Réserver</div>
+          <div class="cta-1-dark" >indisponible</div>
         </div>
       `;
     }

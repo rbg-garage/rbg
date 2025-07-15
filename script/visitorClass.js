@@ -7,13 +7,14 @@ export class Visitor{
 
 
     rechercheMot(terme) {
-        const listeTriee = this.listPieces.filter(piece => piece.libelle.includes(terme));
+        terme = terme.toLowerCase();
+        const listeTriee = this.listPieces.filter(piece => piece.libelle.toLowerCase().includes(terme));
         return listeTriee;
     }
     
 
     rechercheDescr(terme){
-        const listeTriee = this.listPieces.filter(piece => piece.description.includes(termes));
+        const listeTriee = this.listPieces.filter(piece => piece.description.toLowerCase().includes(termes));
         return listeTriee;
     }
 

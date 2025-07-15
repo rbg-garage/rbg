@@ -19,7 +19,7 @@ body {
     --dark-grey:#737373;
     --light-grey:#D9D9D9;
     --border-radius:2.5rem;
-    --border-blue: 2px solid #20578C;
+    --border-blue: 1px solid #20578C;
     --size-big-title: 3rem;
     --size-text:1.25rem;
     --size-small-text:1rem;
@@ -499,6 +499,14 @@ footer{
     /* Ajoutez d'autres styles pour le bouton en surbrillance */
 }
 
+.indisponible{
+    background: var(--light-grey);
+    
+}
+
+.indisponible .cta-1-dark{
+    background: grey;
+}
 
 @media screen and (max-width:1120px){
 
@@ -509,7 +517,7 @@ footer{
     --size-title:1.25rem;
     --size-btn:1rem;
     --size-small-title:0.875rem;
-    --border-blue: 3px solid #20578C;
+    --border-blue: 1px solid #20578C;
     --height-blur-band:20rem;
 
 
