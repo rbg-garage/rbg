@@ -38,7 +38,7 @@ export class Piece {
             <span>${this.marque}</span>
           </div>
           <span class="category">Catégorie : ${this.categorie}</span>
-          <span class="description">${this.description}</span>
+          <span class="description hidden">${this.description}</span>
           <div class="state-price-item">
             <span class="state">${this.etat}</span>
             <h3>${this.prix} &euro;</h3>
