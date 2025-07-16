@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="shortcut icon" href="src/img/logo/rbg.png" type="image/x-icon">
     <link rel="stylesheet" href="src/output.css">
-    <script type="module" src="script/script.js"  defer></script>
+    <script type="module" src="script/script.js" defer></script>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap');
 
@@ -32,11 +32,11 @@
 </nav>
 
 <nav class="mobile bg-white  w-full shadow-sm p-[0.5rem]">
-<a href="index.html#accueil" class="flex text-xs flex-col items-center m-2"><img src="src/img/icon/home_svgrepo.com.png" alt="" class="icon m-auto w-[var(--wh-small-icon)]">Accueil</a>
-<a href="pieces.html" class="flex flex-col text-xs items-center m-2"><img src="src/img/icon/settings_svgrepo.com.png" alt="" class="icon m-auto w-[var(--wh-small-icon)]">Pièces</a>
+<a href="index.html#accueil" class="flex text-xs flex-col items-center m-2"><img src="src/img/icon/home_svgrepo.com.svg" alt="" class="icon m-auto w-[var(--wh-small-icon)]">Accueil</a>
+<a href="pieces.html" class="flex flex-col text-xs items-center m-2"><img src="src/img/icon/settings_svgrepo.com.svg" alt="" class="icon m-auto w-[var(--wh-small-icon)]">Pièces</a>
 <a href="index.html" class="flex flex-col text-xs items-center m-2"><img src="src/img/logo/logo.png" alt="" class="logo w-[5.063rem]"></a>
-<a href="index.html#services" class="flex text-xs flex-col items-center m-2"><img src="src/img/icon/service_svgrepo.com.png" alt="" class="icon  m-auto w-[var(--wh-small-icon)]">Services</a>
-<a href="index.html#contact" class="flex text-xs flex-col items-center m-2"><img src="src/img/icon/phone_svgrepo.com.png" alt="" class="icon  m-auto w-[1rem]">Contact</a>
+<a href="index.html#services" class="flex text-xs flex-col items-center m-2"><img src="src/img/icon/service_svgrepo.com.svg" alt="" class="icon  m-auto w-[var(--wh-small-icon)]">Services</a>
+<a href="index.html#contact" class="flex text-xs flex-col items-center m-2"><img src="src/img/icon/phone_svgrepo.com.svg" alt="" class="icon  m-auto w-[1rem]">Contact</a>
 </nav>
 
     </header>
@@ -52,7 +52,7 @@
          <div>
                  <div class="search-bar w-full">
                     <input type="text" id="search-content" >
-                    <button id="search-action"><img src="src/img/icon/search_svgrepo.com.png" alt="" class="icon"></button>
+                    <button id="search-action"><img src="src/img/icon/search_svgrepo.com.svg" alt="" class="icon"></button>
             </div>
 
             <div class="info-search-bar flex flex-wrap justify-between w-100% ">
@@ -62,10 +62,10 @@
                     <span class="results-number"></span>
                 </div>
 
-                <div class="btn flex mx-auto my-[1rem]  sm:m-0 flex-wrap">
-                    <button class="filter"><img src="src/img/icon/filter_svgrepo.com.png" alt="" class="icon">Filtre</button> 
+                <div class="btn flex mx-auto my-[1rem] sm:m-0 flex-wrap">
+                    <button class="filter"><img src="src/img/icon/filter_svgrepo.com.svg" alt="" class="icon">Filtre</button> 
                     <select class="orderby" id="orderby" name="orderby">
-                        <option value=""><img src="src/img/icon/sort-up_svgrepo.com.png" alt="" class="icon">Trier par :</option>
+                        <option value=""><img src="src/img/icon/sort-up_svgrepo.com.svg" alt="" class="icon">Trier par :</option>
                         <option value="croissant">Prix croissant</option>
                         <option value="decroissant">Prix décroissant</option>
                         <option value="recent">Récent</option>
@@ -76,7 +76,7 @@
                         <div class="flex-col  justify-start bg-white p-6 w-[90%] sm:w-[70%] h-[70%] overflow-scroll shadow-lg rounded-4xl">
                             <div class="flex items-center justify-between">
                                 <h2 class="subtitle">Filtres</h2>
-                                <img src="src/img/icon/close_svgrepo.com.png" alt="" class="icon" id="close">
+                                <img src="src/img/icon/close_svgrepo.com.svg" alt="" class="icon" id="close">
                             </div>
 
                             <div class="flex flex-col">
@@ -174,7 +174,7 @@
                 <a href="mailto:rgbpro@gmail.com"><i class="fa-solid fa-envelope"></i></a>
                 <a href="https://maps.app.goo.gl/ijExkGfF4wUySpMN7"><i class="fa-solid fa-map-pin"></i></a>
                 <a href="https://www.snapchat.com/add/rbg0567"><i class="fa-brands fa-snapchat"></i></a>
-                <a href="https://leboncoin.fr"><img src="src/img/icon/leboncoin_svgrepo.com.png" alt="" class="icon"></a>
+                <a href="https://leboncoin.fr"><img src="src/img/icon/leboncoin_svgrepo.com.svg" alt="" class="icon"></a>
     </div>
 </div>
 
@@ -206,64 +206,74 @@
     //fonction afficher les details : 
 
  function details(event) {
-    // Vérifiez que l'événement est correctement déclenché
-    console.log("Details function triggered");
-
+    
     const button = event.target;
-    console.log("Button clicked:", button);
+    
+    var verify = document.querySelector(".details");
+                
+     if(verify===null){
+     const divContainer = button.closest('.item-search-view'); // Utilisez closest pour trouver l'élément parent spécifique
 
-    // Accédez au bon parent
-    const divContainer = button.closest('.item-search-view'); // Utilisez closest pour trouver l'élément parent spécifique
-    console.log("Container to clone:", divContainer);
+     console.log("Container to clone:", divContainer);
 
-    if (!divContainer) {
-        console.error("Container not found");
-        return;
-    }
+                if (!divContainer) {
+                    console.error("Container not found");
+                    return;
+                }
 
-    var divDetails = document.createElement("div");
-    divDetails.classList.add("details");
+                var divDetails = document.createElement("div");
+                divDetails.classList.add("details");
 
-    var bandeau = document.createElement("div");
-    bandeau.classList.add("bandeau");
-    divDetails.appendChild(bandeau);
+                var bandeau = document.createElement("div");
+                bandeau.classList.add("bandeau");
+                divDetails.appendChild(bandeau);
 
-    var title = document.createElement("h2");
-    title.classList.add("subtitle");
-    title.textContent = "détails";
-    bandeau.appendChild(title);
+                var title = document.createElement("h2");
+                title.classList.add("subtitle");
+                title.textContent = "détails";
+                bandeau.appendChild(title);
 
-    var close = document.createElement("img");
-    close.id = "close";
-    close.alt = "close";
-    close.src = "src/img/icon/close_svgrepo.com.png";
-    close.classList.add("icon");
-    bandeau.appendChild(close);
+                var close = document.createElement("img");
+                close.id = "close";
+                close.alt = "close";
+                close.src = "src/img/icon/close_svgrepo.com.svg";
+                close.classList.add("icon");
+                bandeau.appendChild(close);
 
-    close.addEventListener("click", () => {
-        closedetails();
-    });
+                close.addEventListener("click", () => {
+                    closedetails();
+                });
 
-    var main = document.querySelector("main");
-    if (!main) {
-        console.error("Main element not found");
-        return;
-    }
-   if (main.firstChild) {
-        main.insertBefore(divDetails, main.firstChild);
-    } else {
-        main.appendChild(divDetails);
-    }
+                var main = document.querySelector("main");
+                if (!main) {
+                    console.error("Main element not found");
+                    return;
+                }
+            if (main.firstChild) {
+                    main.insertBefore(divDetails, main.firstChild);
+                } else {
+                    main.appendChild(divDetails);
+                }
 
-    var cloneDiv = divContainer.cloneNode(true);
-    var description = cloneDiv.querySelector(".description");
-    if (description) {
-        description.classList.remove("hidden");
-    } else {
-        console.error("Description element not found in cloned div");
-    }
+                var cloneDiv = divContainer.cloneNode(true);
+                var description = cloneDiv.querySelector(".description");
+                if (description) {
+                    description.classList.remove("hidden");
+                } else {
+                    console.error("Description element not found in cloned div");
+                }
 
-    divDetails.appendChild(cloneDiv);
+                divDetails.appendChild(cloneDiv);
+        
+            }else{
+
+            reservationDiv(verify);
+
+        }
+
+   
+
+    
 }
 
 function closedetails() {
@@ -277,8 +287,6 @@ function closedetails() {
     }
 }
 
-
-    
 
 document.addEventListener('DOMContentLoaded', () => {
 

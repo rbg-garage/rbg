@@ -27,44 +27,60 @@
 </nav>
 
 <nav class="mobile bg-white  w-full shadow-sm p-[0.5rem]">
-<a href="index.html#accueil" class="flex text-xs flex-col items-center m-2"><img src="src/img/icon/home_svgrepo.com.png" alt="" class="icon m-auto w-[var(--wh-small-icon)]">Accueil</a>
-<a href="pieces.html" class="flex flex-col text-xs items-center m-2"><img src="src/img/icon/settings_svgrepo.com.png" alt="" class="icon m-auto w-[var(--wh-small-icon)]">Pièces</a>
+<a href="index.html#accueil" class="flex text-xs flex-col items-center m-2"><img src="src/img/icon/home_svgrepo.com.svg" alt="" class="icon m-auto w-[var(--wh-small-icon)]">Accueil</a>
+<a href="pieces.html" class="flex flex-col text-xs items-center m-2"><img src="src/img/icon/settings_svgrepo.com.svg" alt="" class="icon m-auto w-[var(--wh-small-icon)]">Pièces</a>
 <a href="index.html" class="flex flex-col text-xs items-center m-2"><img src="src/img/logo/logo.png" alt="" class="logo w-[5.063rem]"></a>
-<a href="index.html#services" class="flex text-xs flex-col items-center m-2"><img src="src/img/icon/service_svgrepo.com.png" alt="" class="icon  m-auto w-[var(--wh-small-icon)]">Services</a>
-<a href="index.html#contact" class="flex text-xs flex-col items-center m-2"><img src="src/img/icon/phone_svgrepo.com.png" alt="" class="icon  m-auto w-[1rem]">Contact</a>
+<a href="index.html#services" class="flex text-xs flex-col items-center m-2"><img src="src/img/icon/service_svgrepo.com.svg" alt="" class="icon  m-auto w-[var(--wh-small-icon)]">Services</a>
+<a href="index.html#contact" class="flex text-xs flex-col items-center m-2"><img src="src/img/icon/phone_svgrepo.com.svg" alt="" class="icon  m-auto w-[1rem]">Contact</a>
 </nav>
 
     </header>
     <main>
-        <div class="details">
+    <div class="details reservation">
 <div class="bandeau">
-    <h2 class="subtitle">Détails</h2>
-    <img src="src/img/icon/close_svgrepo.com.png" alt="" class="icon">
+    <h2 class="subtitle">Réservation</h2>
+    <img src="src/img/icon/close_svgrepo.com.svg" alt="" class="icon">
 </div>
-<div class="item-search-view">
-                    <div class="img">
-                        <button class="arrow-left"></button>
-                        <button class="arrow-right"></button>
-                    </div>
-                    <div class="text-item">
-                    <div class="title-item">
-                        <h3>Pneus</h3>
-                        <span>Citroën</span>
-                    </div>
-                    <span class="category">Catégorie : Carosserie</span>
-                    <span class="description">Beaux pneus que je vends icci ihihihihihi</span>
-                    <div class="state-price-item">
-                        <span class="state">Bon état</span>
-                        <h3>7,00 &euro;</h3>
-                    </div>
 
-                    <div class="cta-1-dark">Réserver</div>
+<div class="content-reservation">
+    <div class="item-search-view">
+        <div class="img bg-green-50">
+            <button class="arrow-left"></button>
+            <button class="arrow-right"></button>
+        </div>
+        <div class="text-item">
+        <div class="title-item">
+            <h3>Pneus</h3>
+            <span>Citroën</span>
+        </div>
+        <span class="category">Catégorie : Carosserie</span>
+        <span class="description">Beaux pneus que je vends icci ihihihihihi</span>
+        <div class="state-price-item">
+            <span class="state">Bon état</span>
+            <h3>7,00 &euro;</h3>
+        </div>
 
-                    </div>
-                    
+        <div class="cta-1-dark">Réserver</div>
+
+        </div>
+        
 
 
-                </div>
+    </div>
+    <hr>
+    <form action="" class="msg-reservation">
+        <label for="mail">Email :</label>
+        <input type="email" name="email" id="">
+        <label for="message">Message :</label>
+        <textarea name="message" id="" cols="30" rows="10">
+
+        </textarea>
+        <input type="submit" value="Envoyer" class="cta-1-dark">
+
+
+    </form>
+</div>
+
 
 </div>
 <div class="pt-32 px-8 md:px-16">
@@ -73,7 +89,7 @@
          <div>
                  <div class="search-bar w-full">
                     <input type="text" id="search-content" >
-                    <button id="search-action"><img src="src/img/icon/search_svgrepo.com.png" alt="" class="icon"></button>
+                    <button id="search-action"><img src="src/img/icon/search_svgrepo.com.svg" alt="" class="icon"></button>
             </div>
 
             <div class="info-search-bar flex flex-wrap justify-between w-100% ">
@@ -84,9 +100,9 @@
                 </div>
 
                 <div class="btn flex mx-auto my-[1rem]  sm:m-0 flex-wrap">
-                    <button class="filter"><img src="src/img/icon/filter_svgrepo.com.png" alt="" class="icon">Filtre</button> 
+                    <button class="filter"><img src="src/img/icon/filter_svgrepo.com.svg" alt="" class="icon">Filtre</button> 
                     <select class="orderby" id="orderby" name="orderby">
-                        <option value=""><img src="src/img/icon/sort-up_svgrepo.com.png" alt="" class="icon">Trier par :</option>
+                        <option value=""><img src="src/img/icon/sort-up_svgrepo.com.svg" alt="" class="icon">Trier par :</option>
                         <option value="croissant">Prix croissant</option>
                         <option value="decroissant">Prix décroissant</option>
                         <option value="recent">Récent</option>
@@ -97,7 +113,7 @@
                         <div class="flex-col justify-start bg-white p-6 w-[70%] shadow-lg rounded-4xl">
                             <div class="flex items-center justify-between">
                                 <h2 class="subtitle">Filtres</h2>
-                                <img src="src/img/icon/close_svgrepo.com.png" alt="" class="icon" id="close">
+                                <img src="src/img/icon/close_svgrepo.com.svg" alt="" class="icon" id="close">
                             </div>
 
                             <div class="flex flex-col">
@@ -180,7 +196,6 @@
             <div class="search-results">
 
                 
-
                 <div class="item-search-view">
                     <div class="img">
                         <button class="arrow-left"></button>
@@ -408,7 +423,7 @@
     var close = bandeau.createElement("img");
     close.id="close";
     close.alt="close";
-    close.src = "src/img/icon/close_svgrepo.com.png";
+    close.src = "src/img/icon/close_svgrepo.com.svg";
     close.classList.add("icon");
 
     bandeau.appendChild(title);
@@ -417,6 +432,13 @@
     close.addEventListener("click",()=>{
         closedetails();
     })
+
+    var btnEnvoyer = document.querySelector(".reservation input.cta-1-dark");
+
+    btnEnvoyer.addEventListener("click",()=>{
+        alert("Message envoyé.")
+        closedetails();
+    });
 
     var body = document.querySelector("body");
     body.appendChild(divDetails);

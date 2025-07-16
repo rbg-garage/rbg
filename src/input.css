@@ -261,6 +261,10 @@ i{
     background-color: var(--light-grey);
 }
 
+select option{
+    font-family: var(--sora);
+}
+
 .search-results{
     display: flex;
     flex-wrap: wrap;
@@ -290,6 +294,89 @@ height:100vh;
 background-color: var(--light-blue);
 padding:1rem;
 padding-top:5rem;
+overflow: scroll;
+}
+
+.details.reservation .content-reservation {
+   background-color: white;
+   min-height:125vh;
+   height:fit-content;
+   border-radius: var(--border-radius);
+   padding:1rem 0;
+
+}
+.details.reservation .content-reservation .item-search-view *{
+    font-size: 1rem;
+
+}
+.details.reservation .content-reservation .item-search-view{
+    width:70%;
+    margin:auto;
+    min-height: 20%;
+}
+
+.details.reservation .content-reservation .item-search-view .text-item{
+    margin:0;
+    width: 100%;
+    margin-left:1rem;
+
+}
+
+.details.reservation .content-reservation .item-search-view .text-item{
+    justify-content: space-around;
+
+}
+.details.reservation .content-reservation{
+    width:80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.details.reservation .content-reservation .item-search-view .description,
+.details.reservation .content-reservation .item-search-view .cta-1-dark, 
+.details.reservation .content-reservation .item-search-view .category,
+.details.reservation .content-reservation .item-search-view .img button{
+    display:none;
+
+}
+.details.reservation .content-reservation .item-search-view{
+    flex-direction: row;
+    max-width: 40rem;
+    margin:0 auto;
+}
+
+.details.reservation .content-reservation hr{
+    width:70%;
+    max-width: 30rem;
+    margin: 0 auto;
+    color: #0000004e;
+}
+
+.details.reservation .content-reservation .item-search-view .img{
+    min-width:10rem;
+    max-width: 10rem;
+    min-height:10rem;
+}
+
+.details.reservation .content-reservation form{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    max-width:35rem;
+    margin: 1rem auto;
+    padding:1rem;
+
+}
+
+.details.reservation .content-reservation form input, 
+.details.reservation .content-reservation form textarea{
+    max-width:100%;
+
+}
+
+.details.reservation .item-search-view .text-item{
+   
+    padding:0;
 }
 
 .details .bandeau{
@@ -318,7 +405,6 @@ padding-top:5rem;
 .details .item-search-view .text-item{
     width:50%;
     margin: auto;
-    height:100%;
     padding:2rem;
     display: flex;
     flex-direction: column;
@@ -577,6 +663,26 @@ footer{
     justify-content: center;
 }
 
+
+.details.reservation .content-reservation{
+    width:100%;
+    border-radius: 0;
+}
+
+.details.reservation .content-reservation .item-search-view .img{
+    max-width:5rem;
+    min-width:5rem;
+    max-height:5rem;
+    min-height:5rem;
+    margin-right:2rem;
+
+}
+
+.details.reservation .content-reservation .item-search-view *{
+    font-size: 0.75rem;
+
+}
+
 .details{
 padding:0;
 padding-top:3rem;
@@ -604,6 +710,22 @@ padding-top:3rem;
     padding: 1rem 0;
 
 }
+
+.details.reservation .item-search-view .text-item{
+    width: 100%;
+    max-width: 30rem;
+    height:100%;
+    padding: 1rem 0;
+
+}
+
+.details.reservation .content-reservation .item-search-view{
+    min-height: 20%;
+    width:100%;
+    max-width: 30rem;
+    margin:0 auto;
+}
+
 
 
 

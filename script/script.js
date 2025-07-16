@@ -5,6 +5,106 @@ import { Visitor } from './visitorClass.js';
 const jsonUrl = './data.json';
 let visitor;
 
+window.reservationDiv = reservationDiv;
+
+function reservationDiv(divDetails) {
+  // Ajoutez la classe "reservation" à la divDetails
+  divDetails.classList.add("reservation");
+
+  // Mettez à jour le titre
+  var title = document.querySelector(".subtitle");
+  if (title) {
+    title.textContent = "Réservation";
+  }
+
+  // Clonez l'élément item-search-view
+  var item = divDetails.querySelector(".item-search-view");
+  if (!item) {
+    console.error("Item not found");
+    return;
+  }
+
+  var itemSearchView = item.cloneNode(true);
+
+  // Supprimez l'élément original
+  item.remove();
+
+  // Récupérez l'ID de l'objet
+  var idInput = itemSearchView.querySelector("input[name='id']");
+  if (!idInput) {
+    console.error("ID input not found");
+    return;
+  }
+
+  var id = idInput.value;
+  var objet = visitor.getObjectById(id);
+  if (!objet) {
+    console.error("Object not found with ID:", id);
+    return;
+  }
+
+  // Créez le message de réservation
+  var message = `Bonjour,
+
+J'aimerai réserver la pièce n°${objet.id} - ${objet.libelle} et venir la chercher en magasin.
+
+Merci et bonne journée
+Cordialement,
+[votre nom]`;
+
+  // Créez la structure HTML pour le formulaire de réservation
+  var divContentReservation = document.createElement("div");
+  divContentReservation.classList.add("content-reservation");
+
+  var hr = document.createElement("hr");
+
+  var form = document.createElement("form");
+  form.method = "POST";
+  form.action = "#";
+
+
+  var label1 = document.createElement("label");
+  label1.textContent = "Email";
+  label1.htmlFor = "email";
+
+  var input1 = document.createElement("input");
+  input1.name = "email";
+  input1.type = "email";
+  input1.required = true;
+
+  var label2 = document.createElement("label");
+  label2.textContent = "Message";
+  label2.htmlFor = "message";
+
+  var textArea = document.createElement("textarea");
+  textArea.name = "message";
+  textArea.value = message;
+  textArea.cols="30";
+  textArea.rows="10";
+  textArea.required= true;
+
+  var inputSubmit = document.createElement("input");
+  inputSubmit.value = "Envoyer";
+  inputSubmit.type = "submit";
+  inputSubmit.classList.add("cta-1-dark");
+
+  // Ajoutez les éléments créés à la structure
+  form.appendChild(label1);
+  form.appendChild(input1);
+  form.appendChild(label2);
+  form.appendChild(textArea);
+  form.appendChild(inputSubmit);
+
+  divContentReservation.appendChild(itemSearchView);
+  divContentReservation.appendChild(hr);
+  divContentReservation.appendChild(form);
+
+  // Ajoutez la nouvelle structure à divDetails
+  divDetails.appendChild(divContentReservation);
+}
+
+
+
 fetch(jsonUrl)
   .then(response => {
     if (!response.ok) {
@@ -147,6 +247,8 @@ function handleOrderByChange() {
     }
   });
 }
+
+
 
 // Ajout des écouteurs d'événements
 const searchButton = document.getElementById("search-action");
