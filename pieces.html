@@ -73,7 +73,7 @@
                     </select>
 
                     <div class="popup-filter fixed flex inset-0 items-center justify-center backdrop-blur bg-opacity-50 ">
-                        <div class="flex-col justify-start bg-white p-6 w-[70%] shadow-lg rounded-4xl">
+                        <div class="flex-col  justify-start bg-white p-6 w-[90%] sm:w-[70%] h-[70%] overflow-scroll shadow-lg rounded-4xl">
                             <div class="flex items-center justify-between">
                                 <h2 class="subtitle">Filtres</h2>
                                 <img src="src/img/icon/close_svgrepo.com.png" alt="" class="icon" id="close">
@@ -100,7 +100,7 @@
                                     <div class="flex flex-wrap">
                                     <div class="flex">
                                         <input type="checkbox" id="citroen" name="marque" value="citroen"  />
-                                        <label for="citroen">Pneu</label>
+                                        <label for="citroen">Ford</label>
                                     </div>
                                     <div class="flex">
                                         <input type="checkbox" id="peugeot" name="marque" value="peugeot" />
@@ -132,16 +132,12 @@
                                     <legend>Disponibilité :</legend>
                         <div class="flex flex-wrap">
                                     <div class="flex">
-                                        <input type="radio" id="disponible" name="disponibilite" value="Disponible"  />
-                                        <label for="disponible">Très bon état</label>
+                                        <input type="checkbox" id="disponible" name="disponibilite" value="true"  />
+                                        <label for="disponible">Disponible</label>
                                     </div>
                                     <div class="flex">
-                                        <input type="checkbox" id="indisponible" name="disponibilite" value="Indisponible" />
-                                        <label for="indisponible">Peugeot</label>
-                                    </div>
-                                    <div class="flex">
-                                        <input type="checkbox" id="indisponible" name="disponibilite" value="Indisponible" />
-                                        <label for="indisponible">Peugeot</label>
+                                        <input type="checkbox" id="indisponible" name="disponibilite" value="false" />
+                                        <label for="indisponible">Indisponible</label>
                                     </div>
                                     </div>
                                     </fieldset>

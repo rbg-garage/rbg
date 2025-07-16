@@ -11,10 +11,11 @@ export class Piece {
   dateTime;
   div;
 
-  constructor(id, libelle, marque, description, etat, prix, img, disponibilite, dateTime) {
+  constructor(id, libelle, marque, categorie, description, etat, prix, img, disponibilite, dateTime) {
     this.id = id;
     this.libelle = libelle;
     this.marque = marque;
+    this.categorie = categorie;
     this.description = description;
     this.etat = etat;
     this.prix = prix;
@@ -44,7 +45,7 @@ export class Piece {
             <h3>${this.prix} &euro;</h3>
           </div>
           <input type="hidden" value="${this.id}" name="id">
-          <input type="hidden" value="${this.dateTime}" name="id">
+          <input type="hidden" value="${this.dateTime}" name="datetime">
           <div class="cta-1-dark" onclick="details(event)">Réserver</div>
         </div>
       `;
@@ -55,14 +56,14 @@ export class Piece {
         <div class="img"></div>
         <div class="text-item">
           <div class="title-item">
-            <h3>Pneus</h3>
-            <span>Citroën</span>
+            <h3>${this.libelle}</h3>
+            <span>${this.marque}</span>
           </div>
-          <span class="category">Catégorie : Carosserie</span>
+          <span class="category">Catégorie :  ${this.categorie}</span>
           <span class="description hidden">${this.description}</span>
           <div class="state-price-item">
-            <span class="state">Bon état</span>
-            <h3>17,00 &euro;</h3>
+            <span class="state">${this.etat}</span>
+            <h3>${this.prix} &euro;</h3>
           </div>
           <input type="hidden" value="${this.id}" name="id">
           <input type="hidden" value="${this.dateTime}" name="datetime">

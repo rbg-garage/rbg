@@ -1,93 +1,126 @@
-export class Visitor{
-    listPieces;
-
-    constructor(listPieces){
+export class Visitor {
+    constructor(listPieces) {
         this.listPieces = listPieces;
     }
 
-
     rechercheMot(terme) {
-        terme = terme.toLowerCase();
-        const listeTriee = this.listPieces.filter(piece => piece.libelle.toLowerCase().includes(terme));
-        return listeTriee;
-    }
-    
-
-    rechercheDescr(terme){
-        const listeTriee = this.listPieces.filter(piece => piece.description.toLowerCase().includes(termes));
-        return listeTriee;
+        const termeLower = terme.toLowerCase();
+        return this.listPieces.filter(piece => piece.libelle.toLowerCase().includes(termeLower));
     }
 
-    triPlusRecents() {
-        const listeTriee = this.listPieces.sort((a, b) => new Date(b.dateTime) - new Date(a.dateTime));
-        return listeTriee;
+    rechercheDescr(terme) {
+        const termeLower = terme.toLowerCase();
+        return this.listPieces.filter(piece => piece.description.toLowerCase().includes(termeLower));
     }
 
-    triPlusAnciens() {
-        const listeTriee = this.listPieces.sort((a, b) => new Date(a.dateTime) - new Date(b.dateTime));
-        return listeTriee;
+    triPlusRecents(liste) {
+        return [...liste].sort((a, b) => new Date(b.dateTime) - new Date(a.dateTime));
     }
 
-    triPrixCroissant() {
-        const listeTriee = this.listPieces.sort((a, b) => a.prix - b.prix);
-        return listeTriee;
+    triPlusAnciens(liste) {
+        return [...liste].sort((a, b) => new Date(a.dateTime) - new Date(b.dateTime));
     }
 
-    triPrixDecroissant() {
-        const listeTriee = this.listPieces.sort((a, b) => b.prix - a.prix);
-        return listeTriee;
+    triPrixCroissant(liste) {
+        return [...liste].sort((a, b) => a.prix - b.prix);
     }
 
-    filtreMarque(marque){
-        const listeTriee = this.listPieces.filter(piece => piece.marque === marque);
-        return listeTriee;
-
+    triPrixDecroissant(liste) {
+        return [...liste].sort((a, b) => b.prix - a.prix);
     }
 
-    filtreCategorie(categorie){
-        const listeTriee = this.listPieces.filter(piece => piece.categorie === categorie);
-        return listeTriee;
-
+    filtreMarque(marque) {
+        const marqueLower = marque.toLowerCase();
+        return this.listPieces.filter(piece => piece.marque.toLowerCase() === marqueLower);
     }
 
-    filtreEtat(etat){
-        const listeTriee = this.listPieces.filter(piece => piece.etat === etat);
-        return listeTriee;
-
+    filtreCategorie(categorie) {
+        const categorieLower = categorie.toLowerCase();
+        return this.listPieces.filter(piece => piece.categorie.toLowerCase() === categorieLower);
     }
 
-    filtrePrix(px1,px2){
-        const listeTriee = this.listPieces.filter(piece => piece.prix > px1 && piece.prix < px2);
-        return listeTriee;
-
-    }
-    
-    filtreDisponibilite(disponibilite){
-        const listeTriee = this.listPieces.filter(piece => piece.disponibilite === disponibilite);
-        return listeTriee;
-
+    filtreEtat(etat) {
+        const etatLower = etat.toLowerCase();
+        return this.listPieces.filter(piece => piece.etat.toLowerCase() === etatLower);
     }
 
+    filtrePrix(px1, px2) {
+        return this.listPieces.filter(piece => piece.prix > px1 && piece.prix < px2);
+    }
 
-
-
-
-
-
-
-
-
+    filtreDisponibilite(disponibilite) {
+        const disponibiliteLower = disponibilite.toString().toLowerCase();
+        return this.listPieces.filter(piece => piece.disponibilite.toString().toLowerCase() === disponibiliteLower);
+    }
 
     elementsCommuns(tableaux) {
-    if (tableaux.length === 0) {
-        return [];
+        if (tableaux.length === 1 ) {
+            return [];
+        }
+        return tableaux.reduce((acc, tableau) => acc.filter(element => tableau.includes(element)));
     }
 
-    return tableaux.reduce((acc, tableau) => {
-        
-        return acc.filter(element => tableau.includes(element));
-    }, tableaux[0]);
-}
+    getObjectById(id) {
+        return this.listPieces.find(piece => piece.id == id);
+    }
 
-}
+    getMultipleObjectsById(arrayId) {
+        return arrayId.map(id => this.getObjectById(id)).filter(object => object !== undefined);
+    }
 
+    getIdFromDiv(div) {
+        const inputs = div.querySelectorAll('input[name="id"]');
+        const values = Array.from(inputs).map(input => input.value);
+        return values;
+    }
+
+    rechercheTriee(recherche, arrayCategorie, arrayMarque, arrayEtat, arrayDisponibilite) {
+        var tableau = [];
+        tableau.push(recherche);
+
+        const arrayCategorieFiltre = recherche.filter(piece =>
+            arrayCategorie.some(cat => piece.categorie.toLowerCase() === cat.toLowerCase())
+        );
+
+        if(arrayCategorie.length!==0){
+            tableau.push(arrayCategorieFiltre);
+        }
+
+        console.log(arrayCategorieFiltre);
+
+        const arrayMarqueFiltre = recherche.filter(piece =>
+            arrayMarque.some(marque => piece.marque.toLowerCase() === marque.toLowerCase())
+        );
+        console.log(arrayMarqueFiltre);
+
+        if(arrayMarque.length!==0){
+            tableau.push(arrayMarqueFiltre);
+        }
+
+
+        const arrayEtatFiltre = recherche.filter(piece =>
+            arrayEtat.some(etat => piece.etat.toLowerCase() === etat.toLowerCase())
+        );
+
+        console.log(arrayEtatFiltre);
+
+        if(arrayEtat.length!==0){
+            tableau.push(arrayEtatFiltre);
+        }
+
+
+        const arrayDisponibiliteFiltre = recherche.filter(piece =>
+            arrayDisponibilite.some(dispo => piece.disponibilite.toString().toLowerCase() === dispo.toString().toLowerCase())
+        );
+
+        console.log(arrayDisponibiliteFiltre);
+
+        if(arrayDisponibilite.length!==0){
+            tableau.push(arrayDisponibiliteFiltre);
+        }
+
+        console.log(tableau);
+
+        return this.elementsCommuns(tableau);
+    }
+}
