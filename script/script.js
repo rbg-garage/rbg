@@ -60,7 +60,7 @@ Cordialement,
 
   var form = document.createElement("form");
   form.method = "POST";
-  form.action = "#";
+  form.action = "https://formspree.io/f/mldldrog";
 
 
   var label1 = document.createElement("label");
