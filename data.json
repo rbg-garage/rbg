@@ -82,19 +82,5 @@
     "categorie": "moteur",
     "disponibilite": true,
     "dateTime": "2025-10-18T18:28:40.281Z"
-  },
-  {
-    "id": 7,
-    "libelle": "Pneu été",
-    "marque": "Michelin",
-    "description": "Pneu pour toutes saisons, idéal pour routes mouillées.",
-    "etat": "Très bon état",
-    "prix": 100,
-    "img": [
-      "pexels-tima-miroshnichenko-5640644.jpg"
-    ],
-    "categorie": "moteur",
-    "disponibilite": true,
-    "dateTime": "2025-10-18T18:28:49.936Z"
   }
 ]
