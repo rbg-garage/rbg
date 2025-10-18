@@ -6,22 +6,26 @@
     "description": "Pneu pour toutes saisons, idéal pour routes mouillées.",
     "etat": "Très bon état",
     "prix": 100,
-    "img": ["pexels-tima-miroshnichenko-5640644.jpg"],
-    "categorie":"moteur",
+    "img": [
+      "pexels-tima-miroshnichenko-5640644.jpg"
+    ],
+    "categorie": "moteur",
     "disponibilite": true,
-    "dateTime": "2023-10-01T12:00:00Z"
+    "dateTime": "2023-10-01T12:00:00.000Z"
   },
   {
     "id": 2,
-    "libelle": "Pneu hiver",
+    "libelle": "Nouveau libellé",
     "marque": "Bridgestone",
     "description": "Pneu hiver pour une meilleure adhérence sur neige.",
     "etat": "Bon état",
-    "prix": 120,
-    "img": ["pexels-shvetsa-4315575.jpg"],
-    "categorie":"moteur",
+    "prix": 150,
+    "img": [
+      "pexels-shvetsa-4315575.jpg"
+    ],
+    "categorie": "moteur",
     "disponibilite": false,
-    "dateTime": "2023-09-15T10:30:00Z"
+    "dateTime": "2025-10-18T18:26:13.369Z"
   },
   {
     "id": 3,
@@ -30,10 +34,12 @@
     "description": "Jante en alliage léger, design sportif.",
     "etat": "Correct",
     "prix": 200,
-    "img": ["pexels-pixabay-248539.jpg"],
-    "categorie":"moteur",
+    "img": [
+      "pexels-pixabay-248539.jpg"
+    ],
+    "categorie": "moteur",
     "disponibilite": true,
-    "dateTime": "2023-08-20T09:15:00Z"
+    "dateTime": "2023-08-20T09:15:00.000Z"
   },
   {
     "id": 4,
@@ -42,10 +48,12 @@
     "description": "Batterie performante pour toutes voitures.",
     "etat": "Neuf",
     "prix": 90,
-    "img": ["pexels-laker-6156594.jpg"],
-    "categorie":"moteur",
+    "img": [
+      "pexels-laker-6156594.jpg"
+    ],
+    "categorie": "moteur",
     "disponibilite": true,
-    "dateTime": "2023-10-05T14:25:00Z"
+    "dateTime": "2023-10-05T14:25:00.000Z"
   },
   {
     "id": 5,
@@ -54,9 +62,11 @@
     "description": "Amortisseur pour une conduite plus confortable.",
     "etat": "Occasion",
     "prix": 75,
-    "img": ["pexels-danilo-fernandes-13673-64687.jpg"],
-    "categorie":"moteur",
+    "img": [
+      "pexels-danilo-fernandes-13673-64687.jpg"
+    ],
+    "categorie": "moteur",
     "disponibilite": false,
-    "dateTime": "2023-07-30T16:40:00Z"
+    "dateTime": "2023-07-30T16:40:00.000Z"
   }
 ]
