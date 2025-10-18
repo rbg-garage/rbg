@@ -1,1 +1,62 @@
-"[\n  {\n    \"id\": 1,\n    \"libelle\": \"Pneu été\",\n    \"marque\": \"Michelin\",\n    \"description\": \"Pneu pour toutes saisons, idéal pour routes mouillées.\",\n    \"etat\": \"Très bon état\",\n    \"prix\": 100,\n    \"img\": [\n      \"pexels-tima-miroshnichenko-5640644.jpg\"\n    ],\n    \"categorie\": \"moteur\",\n    \"disponibilite\": true,\n    \"dateTime\": \"2023-10-01T12:00:00.000Z\"\n  },\n  {\n    \"id\": 2,\n    \"libelle\": \"Nouveau libellé\",\n    \"marque\": \"Bridgestone\",\n    \"description\": \"Pneu hiver pour une meilleure adhérence sur neige.\",\n    \"etat\": \"Bon état\",\n    \"prix\": 150,\n    \"img\": [\n      \"pexels-shvetsa-4315575.jpg\"\n    ],\n    \"categorie\": \"moteur\",\n    \"disponibilite\": false,\n    \"dateTime\": \"2025-10-18T18:02:56.825Z\"\n  },\n  {\n    \"id\": 3,\n    \"libelle\": \"Jante alliage\",\n    \"marque\": \"OZ Racing\",\n    \"description\": \"Jante en alliage léger, design sportif.\",\n    \"etat\": \"Correct\",\n    \"prix\": 200,\n    \"img\": [\n      \"pexels-pixabay-248539.jpg\"\n    ],\n    \"categorie\": \"moteur\",\n    \"disponibilite\": true,\n    \"dateTime\": \"2023-08-20T09:15:00.000Z\"\n  },\n  {\n    \"id\": 4,\n    \"libelle\": \"Batterie voiture\",\n    \"marque\": \"Bosch\",\n    \"description\": \"Batterie performante pour toutes voitures.\",\n    \"etat\": \"Neuf\",\n    \"prix\": 90,\n    \"img\": [\n      \"pexels-laker-6156594.jpg\"\n    ],\n    \"categorie\": \"moteur\",\n    \"disponibilite\": true,\n    \"dateTime\": \"2023-10-05T14:25:00.000Z\"\n  },\n  {\n    \"id\": 5,\n    \"libelle\": \"Amortisseur\",\n    \"marque\": \"Monroe\",\n    \"description\": \"Amortisseur pour une conduite plus confortable.\",\n    \"etat\": \"Occasion\",\n    \"prix\": 75,\n    \"img\": [\n      \"pexels-danilo-fernandes-13673-64687.jpg\"\n    ],\n    \"categorie\": \"moteur\",\n    \"disponibilite\": false,\n    \"dateTime\": \"2023-07-30T16:40:00.000Z\"\n  },\n  {\n    \"id\": 6,\n    \"libelle\": \"Pneu été\",\n    \"marque\": \"Michelin\",\n    \"description\": \"Pneu pour toutes saisons, idéal pour routes mouillées.\",\n    \"etat\": \"Très bon état\",\n    \"prix\": 100,\n    \"img\": [\n      \"pexels-tima-miroshnichenko-5640644.jpg\"\n    ],\n    \"categorie\": \"moteur\",\n    \"disponibilite\": true,\n    \"dateTime\": \"2025-10-18T18:05:14.711Z\"\n  }\n]"
+[
+  {
+    "id": 1,
+    "libelle": "Pneu été",
+    "marque": "Michelin",
+    "description": "Pneu pour toutes saisons, idéal pour routes mouillées.",
+    "etat": "Très bon état",
+    "prix": 100,
+    "img": ["pexels-tima-miroshnichenko-5640644.jpg"],
+    "categorie":"moteur",
+    "disponibilite": true,
+    "dateTime": "2023-10-01T12:00:00Z"
+  },
+  {
+    "id": 2,
+    "libelle": "Pneu hiver",
+    "marque": "Bridgestone",
+    "description": "Pneu hiver pour une meilleure adhérence sur neige.",
+    "etat": "Bon état",
+    "prix": 120,
+    "img": ["pexels-shvetsa-4315575.jpg"],
+    "categorie":"moteur",
+    "disponibilite": false,
+    "dateTime": "2023-09-15T10:30:00Z"
+  },
+  {
+    "id": 3,
+    "libelle": "Jante alliage",
+    "marque": "OZ Racing",
+    "description": "Jante en alliage léger, design sportif.",
+    "etat": "Correct",
+    "prix": 200,
+    "img": ["pexels-pixabay-248539.jpg"],
+    "categorie":"moteur",
+    "disponibilite": true,
+    "dateTime": "2023-08-20T09:15:00Z"
+  },
+  {
+    "id": 4,
+    "libelle": "Batterie voiture",
+    "marque": "Bosch",
+    "description": "Batterie performante pour toutes voitures.",
+    "etat": "Neuf",
+    "prix": 90,
+    "img": ["pexels-laker-6156594.jpg"],
+    "categorie":"moteur",
+    "disponibilite": true,
+    "dateTime": "2023-10-05T14:25:00Z"
+  },
+  {
+    "id": 5,
+    "libelle": "Amortisseur",
+    "marque": "Monroe",
+    "description": "Amortisseur pour une conduite plus confortable.",
+    "etat": "Occasion",
+    "prix": 75,
+    "img": ["pexels-danilo-fernandes-13673-64687.jpg"],
+    "categorie":"moteur",
+    "disponibilite": false,
+    "dateTime": "2023-07-30T16:40:00Z"
+  }
+]
