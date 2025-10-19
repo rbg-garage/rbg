@@ -170,7 +170,6 @@ function handleSearch() {
       });
     } else {
       removeAllChildNodes(conteneur);
-      alert("Pas de résultats !");
       conteneur.innerHTML += "<h2 class='subtitle'>Aucun résultat.</h2>";
     }
     nameSearch.textContent = searchContent.value;
@@ -254,6 +253,8 @@ function handleOrderByChange() {
 const searchButton = document.getElementById("search-action");
 const filterSearchAction = document.querySelector(".filter-search-action");
 const orderByBtn = document.querySelector(".orderby");
+const searchContent = document.getElementById("search-content");
+
 
 if (searchButton) {
   searchButton.addEventListener("click", handleSearch);
@@ -266,3 +267,11 @@ if (filterSearchAction) {
 if (orderByBtn) {
   orderByBtn.addEventListener("change", handleOrderByChange);
 }
+
+searchContent.addEventListener("keypress", function(event) {
+  if(event.key==='Enter'){
+    handleSearch();
+  }
+});
+
+

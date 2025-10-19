@@ -276,11 +276,16 @@ select option{
 .item-search-view{
     width:22.188rem;
     min-height:32.563rem;
-    border:var(--border-blue);
-    border-radius:var(--border-radius);
+    box-shadow: 0px 10px 10px #00000025;
+    border-radius:1rem;
     margin:1rem;
     overflow: hidden;
    background-color: white;
+}
+
+.item-search-view i {
+    margin: 0 0.35rem;
+    font-size: 1rem;    
 }
 
 .details{
@@ -544,6 +549,10 @@ overflow: scroll;
 
 }
 
+.mobile .slide{
+    background-size: 15rem;
+}
+
 
 
 
@@ -619,10 +628,10 @@ footer{
     height:fit-content;
 }
 
-.view-on-device .search-results div:nth-last-child(1),
-.view-on-device .search-results div:nth-last-child(2),
-.view-on-device .search-results div:nth-last-child(3),
-.view-on-device .search-results div:nth-last-child(4){
+.view-on-device .search-results .item-search-view:nth-last-child(1),
+.view-on-device .search-results .item-search-view:nth-last-child(2),
+.view-on-device .search-results .item-search-view:nth-last-child(3),
+.view-on-device .search-results .item-search-view:nth-last-child(4){
     display:none;
 }
 
@@ -661,6 +670,7 @@ footer{
     display:  flex;
     align-items: center;
     justify-content: center;
+    width:100%;
 }
 
 

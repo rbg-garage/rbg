@@ -38,10 +38,10 @@ export class Piece {
             <h3>${this.libelle}</h3>
             <span>${this.marque}</span>
           </div>
-          <span class="category">Catégorie : ${this.categorie}</span>
+          <span class="category"><i class="fas fa-tags"></i>Catégorie : ${this.categorie}</span>
           <span class="description hidden">${this.description}</span>
           <div class="state-price-item">
-            <span class="state">${this.etat}</span>
+            <span class="state"><i class="fas fa-wrench"></i>${this.etat}</span>
             <h3>${this.prix} &euro;</h3>
           </div>
           <input type="hidden" value="${this.id}" name="id">
@@ -59,10 +59,10 @@ export class Piece {
             <h3>${this.libelle}</h3>
             <span>${this.marque}</span>
           </div>
-          <span class="category">Catégorie :  ${this.categorie}</span>
+          <span class="category"><i class="fas fa-tags"></i>Catégorie :  ${this.categorie}</span>
           <span class="description hidden">${this.description}</span>
           <div class="state-price-item">
-            <span class="state">${this.etat}</span>
+            <span class="state"><i class="fas fa-wrench"></i>${this.etat}</span>
             <h3>${this.prix} &euro;</h3>
           </div>
           <input type="hidden" value="${this.id}" name="id">

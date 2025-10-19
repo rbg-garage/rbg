@@ -41,12 +41,12 @@
     </header>
     <main class="">
 
-        <section class="bloc-1-home bg-white  h-screen py-[3rem] md:py-0" id="accueil">
+        <section class="bloc-1-home bg-white  h-screen py-[3rem] md:py-0 flex  " id="accueil">
             <div class="computer flex flex-col h-screen">
                 <div class="computer h-screen">
  <div class="left m-auto flex flex-col flex-wrap justify-items-start items-center">
                     
-                    <h1 class="text-left">Acheter des pièces d'occasion et faites réparer votre véhicule</h1>
+                    <h1 class="text-left animate-pulse">Acheter des pièces d'occasion et faites réparer votre véhicule</h1>
                     <div class="inside-box">
                         <div class="my-14"><a href="#services" class="cta-1-dark m-5">Réparer</a>
                         <a href="pieces.html" class="cta-2-white">Chercher une pièce</a>
@@ -433,20 +433,16 @@
             buttons.push(btn);
         });
 
-        // Initialiser l'image de fond
         container.style.backgroundImage = `url('src/img/img/${imgArray[0]}')`;
 
-        // Ajouter la surbrillance au premier bouton
         if (buttons.length > 0) {
             buttons[0].classList.add('highlight');
         }
 
-        // Changer automatiquement les diapositives toutes les 3 secondes
         setInterval(() => {
             currentIndex = (currentIndex + 1) % imgArray.length;
             container.style.backgroundImage = `url('src/img/img/${imgArray[currentIndex]}')`;
 
-            // Mettre à jour la surbrillance pour le bouton correspondant
             buttons.forEach((button, index) => {
                 button.classList.toggle('highlight', index === currentIndex);
             });

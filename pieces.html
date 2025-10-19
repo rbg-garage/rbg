@@ -81,7 +81,7 @@
 
                             <div class="flex flex-col">
                                      <fieldset>
-                                    <legend>Catégorie :</legend>
+                                    <legend><i class="fas fa-tags"></i>Catégorie :</legend>
                                     <div class="flex flex-wrap">
                                     <div class="flex">
                                         <input type="checkbox" id="pneu" name="category" value="pneu"  />
@@ -96,7 +96,7 @@
 
                                     <fieldset>
 
-                                    <legend>Marque :</legend>
+                                    <legend><i class="fa-solid fa-car-side"></i>Marque :</legend>
                                     <div class="flex flex-wrap">
                                     <div class="flex">
                                         <input type="checkbox" id="citroen" name="marque" value="citroen"  />
@@ -111,7 +111,7 @@
 
                                     <fieldset>
 
-                                    <legend>Etat :</legend>
+                                    <legend><i class="fas fa-wrench"></i>Etat :</legend>
                                     <div class="flex flex-wrap">
                                     <div class="flex">
                                         <input type="checkbox" id="tresbonetat" name="etat" value="Très bon état"  />
@@ -129,7 +129,7 @@
 
                                      <fieldset>
 
-                                    <legend>Disponibilité :</legend>
+                                    <legend><i class="fas fa-calendar-check"></i>Disponibilité :</legend>
                         <div class="flex flex-wrap">
                                     <div class="flex">
                                         <input type="checkbox" id="disponible" name="disponibilite" value="true"  />
@@ -301,6 +301,11 @@ childCounter.textContent = resultDiv.childElementCount + " résultats";
 // Créez une instance de MutationObserver pour observer les changements dans le nombre d'enfants
 const observer = new MutationObserver(function() {
     childCounter.textContent = resultDiv.childElementCount + " résultats";
+    if(resultDiv.childElementCount===1 && resultDiv.childNodes[0].nodeName === "H2"){
+        childCounter.textContent =  "0 résultat"; // parce qu'il y a que le titre aucun résultat qui est compté
+
+        
+    }
 });
 
 // Configuration de l'observateur pour observer les changements dans les enfants
